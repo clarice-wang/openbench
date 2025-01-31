@@ -46,3 +46,76 @@ A structured record of all interviews with columns for:
 - `conversation.txt` is cleared at the start of each run
 - The simulation uses GPT-4o for generating responses in automated mode
 - The interview questions are configured for a UX/UI Designer position but can be modified in the code
+
+
+## Response Style Evaluation (response_evaluator.py)
+
+### Purpose
+This script serves as a proof of concept to validate whether GPT can consistently generate interview responses that match specific quality labels (brief, vague, superficial, and good). It helps establish the reliability of the mock candidate responses in the main interview simulation.
+
+### What it Tests
+The script evaluates GPT's ability to generate responses across four styles:
+- **Brief**: Overly general responses lacking detail
+- **Vague**: Responses missing convincing specifics
+- **Superficial**: Surface-level answers without depth
+- **Good**: Clear, specific responses with compelling details
+
+### How it Works
+1. **Response Generation**
+   - Generates 3 responses per style (12 total)
+   - Uses real interview questions
+   - Applies style-specific instructions to GPT
+
+2. **Human Evaluation Process**
+   - Presents responses in random order to prevent bias
+   - Shows:
+     - Interview question
+     - Generated response
+     - Intended style
+     - Style description
+   - Collects:
+     - Rating (1-5 scale)
+     - Optional evaluator notes
+
+3. **Analysis**
+   - Calculates average ratings per style
+   - Shows rating distribution
+   - Saves raw data and analysis for further study
+
+### Usage
+
+1. Run the evaluator: `python3 response_evaluator.py`
+
+2. For each response:
+   - Read the question and response
+   - Consider how well it matches the intended style
+   - Rate from 1 (Poor match) to 5 (Perfect match)
+   - Add optional notes about the response quality
+
+3. Review results:
+   - Terminal shows summary statistics
+   - Full data saved to `evaluation_results.json`
+
+### Data Collection
+Results are saved in `evaluation_results.json` containing:
+- Raw evaluation data
+  - Questions and responses
+  - Intended styles
+  - Human ratings and notes
+- Analysis per style
+  - Average ratings
+  - Sample counts
+  - Rating distributions
+
+### Using as Proof of Concept
+This tool helps validate the interview simulation by:
+1. Quantifying GPT's ability to generate style-specific responses
+2. Collecting human evaluation data
+3. Providing statistical evidence of response quality
+4. Creating a dataset for future improvements
+
+The results can be used to:
+- Justify the use of GPT for mock interviews
+- Identify which response styles work best
+- Fine-tune style instructions
+- Document the system's effectiveness
