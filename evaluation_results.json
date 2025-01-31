@@ -1,0 +1,146 @@
+{
+  "raw_evaluations": [
+    {
+      "question": "Can you walk us through a project in your portfolio that best demonstrates your UX/UI design skills?",
+      "response": "Well, I have worked on many projects that showcase my UX/UI design skills. One, in particular, involved designing for a new mobile app. There was a lot of research involved, a lot of iterations, a lot of testing. Pretty standard stuff, really. And in the end, the project turned out to be quite successful. How successful? Well, let's just say that the metrics and feedback were very positive.",
+      "intended_style": "vague",
+      "style_instruction": "You should answer in a vague manner, without providing the convincing specifics that would make your story fully compelling.",
+      "human_rating": 5,
+      "human_notes": "extremely vague, but mentions a topic that could be expanded upon"
+    },
+    {
+      "question": "Describe your most significant leadership experience.",
+      "response": "At my previous job, I led a team to complete a project. It went well and the project was successful.",
+      "intended_style": "superficial",
+      "style_instruction": "You should answer in a superficial manner, avoiding in-depth details that would make your response more engaging.",
+      "human_rating": 5,
+      "human_notes": "doesn't even mention what the project is"
+    },
+    {
+      "question": "Tell me about a time when you had to handle a difficult client situation.",
+      "response": "Well, I've had quite a few encounters with difficult clients throughout my career in various roles. There was this one time, for instance, where a client was unsatisfied with our service. I listened attentively to their concerns, shared my insights, and provided some solutions. Through open lines of communication and mutual respect, we were able to turn the situation around, and the client continued to do business with us.",
+      "intended_style": "vague",
+      "style_instruction": "You should answer in a vague manner, without providing the convincing specifics that would make your story fully compelling.",
+      "human_rating": 5,
+      "human_notes": "gives an example, but doesn't specify the exact situation"
+    },
+    {
+      "question": "Describe your most significant leadership experience.",
+      "response": "I've held multiple leadership roles in various professional arenas. In these roles, I was tasked with coordinating team efforts, making strategic decisions, and often mediating conflicts to ensure teamwork and productivity. I pride myself on my strong ability to promote communication and collaboration as well as exercise fair and balanced decision making. Over the years, my leadership experience has helped me to develop a solid understanding of team dynamics and foster a conducive work environment.",
+      "intended_style": "brief",
+      "style_instruction": "You should respond in an overly general way, avoiding concrete details, even if you are asked to provide a detailed story.",
+      "human_rating": 3,
+      "human_notes": "moreso vague than brief"
+    },
+    {
+      "question": "What's the most innovative solution you've implemented?",
+      "response": "Well, there was this one project I worked on where we faced some complications. After analyzing and brainstorming, I proposed an innovative solution that streamlined our processes and led us to overcome the challenge. Ultimately, this had a positive result on the overall project.",
+      "intended_style": "vague",
+      "style_instruction": "You should answer in a vague manner, without providing the convincing specifics that would make your story fully compelling.",
+      "human_rating": 5,
+      "human_notes": ""
+    },
+    {
+      "question": "Can you walk us through a project in your portfolio that best demonstrates your UX/UI design skills?",
+      "response": "Absolutely, I'd be happy to discuss a project that I'm particularly proud of, which I completed during my tenure at WebVision, a leading digital marketing agency. This was a comprehensive UX/UI project for a new fintech startup called FinTrack.\n\nThe project's objective was to design an intuitive and user-friendly web and mobile application for FinTrack users to manage their personal finances, investments, and savings. \n\nTo begin with, I conducted meticulous user research - interviews, surveys, and heuristic analysis - to deeply understand the users' needs, pain points and, aspirations. This helped me generate more precise user personas, an integral part of designing any UX/UI process.\n\nOnce the user research was complete, I proceeded to the ideation phase. Here, I designed multiple sketches and wireframes using tools like Sketch and Adobe XD. Each concept focused on simplicity, usability, and aesthetics, with a clear alignment to the tool's functional goal - providing a seamless personal finance management tool.\n\nAfter several brainstorming sessions with the team and multiple iterations, we narrowed down to one wireframe. This was then converted into a clickable prototype using InVision. I specifically ensured the prototype carried all essential components such as the dashboard for overview of finances, separately delineated sections for expenses, savings, and investments, and a smooth flow for adding transactions.\n\nBefore moving into the final design, we conducted usability tests on this prototype. Feedback from the testing led to invaluable improvements like incorporating a darker shade of blue for better accessibility for color-blind individuals, and repositioning the 'add transaction' button for better reachability.\n\nOnce these changes were made, I began working on the UI design. I adhered to the company's brand guideline for maintaining brand consistency across all interfaces. I also ensured to use human-centered design principles - keeping elements large and legible, incorporating whitespace, using recognisable icons, etc.\n\nAfter two more rounds of testing and iterations, the final design was handed over to the development team. The product was well-received, with an initial user rating of 4.5 out of 5. Most of them appreciated the ease of use and intuitiveness of the design.\n\nOverall, this project is a good example of my UX/UI design skills as it included every step in the process from user research, and prototyping to design and usability testing. The design solutions were strongly rooted in user feedback and usability principles, and the outcomes were measurable and positive. I believe it's this structured, user-oriented approach that I would bring to your team.",
+      "intended_style": "good",
+      "style_instruction": "You need to answer in a clear and specific manner, providing convincing details to make your story compelling.",
+      "human_rating": 5,
+      "human_notes": "full story, has metrics"
+    },
+    {
+      "question": "What's the most innovative solution you've implemented?",
+      "response": "I once revised an existing business process, which resulted in increased efficiency for the team and company.",
+      "intended_style": "superficial",
+      "style_instruction": "You should answer in a superficial manner, avoiding in-depth details that would make your response more engaging.",
+      "human_rating": 5,
+      "human_notes": ""
+    },
+    {
+      "question": "What's the most innovative solution you've implemented?",
+      "response": "One of the most innovative solutions I implemented was during my tenure as a Project Manager at ABC Software Development Company, where I led a team of software developers. During a critical phase of the project, we were running behind schedule due to a complex feature we were supposed to deliver that wasn't functioning as expected. The issue lied in integrating various software components.\n\nInstead of delaying the project further and burdening the team with extended working hours, I came up with an alternative solution. I suggested building an isolate simulation of the problematic areas first, rather than plowing straight ahead and resolving the problem in the full context of the whole project. This strategy helped to highlight the root causes of the problems in the software's structure and made the development process more manageable.\n\nMy team, upon initial hesitation, were on board with the idea considering the proposed benefits. We isolated problematic components, identified bottlenecks, and ended up resolving the issues without the need for overtime or weekend work. We managed to complete that particular phase of the project a week ahead of the revised schedule.\n\nThis innovative approach significantly increased the efficiency of the team and allowed us to deliver a high-quality product within the estimated timeline. It also fostered a positive work-life balance, which dramatically boosted the morale of my team. Moreover, it raised our credibility with our stakeholders as we able to deliver a complex feature smoothly and on time. Since then, this isolation and simulation approach has been adopted by other teams in the company facing similar problems, thus elevating the overall productivity and success rate of the projects.",
+      "intended_style": "good",
+      "style_instruction": "You need to answer in a clear and specific manner, providing convincing details to make your story compelling.",
+      "human_rating": 4,
+      "human_notes": "could be more specific"
+    },
+    {
+      "question": "What's the most innovative solution you've implemented?",
+      "response": "In my previous roles, I have consistently sought to identify opportunities for innovation and process improvement. When I spotted one particular inefficiency in a system we were using, I initiated a process of brainstorming, analysis, and project development. This led to a new solution being implemented which significantly improved our team's productivity and effectiveness. While this experience had numerous specific details, the key point is I am always ready to innovate and find novel solutions to enhance workflows and processes.",
+      "intended_style": "brief",
+      "style_instruction": "You should respond in an overly general way, avoiding concrete details, even if you are asked to provide a detailed story.",
+      "human_rating": 3,
+      "human_notes": "more vague than brief"
+    },
+    {
+      "question": "Describe your most significant leadership experience.",
+      "response": "My most significant leadership experience transpired during my tenure as a Project Manager at ITX Solutions, a mid-sized IT solutions company. It was here that I learned the crux of leadership: inspiring a team towards achieving a common goal.\n\nWhen I assumed the Project Manager role, I was handed an ambitious project which involved migrating a government agency\u2019s on-premise data to cloud storage. This was a critical situation as the project was already behind schedule by almost four months when I assumed the role, and the client was close to pulling out due to previous management's ineffectiveness.\n\nThe first order of business for me was to identify the areas of concern which were impeding our progress. Upon scrutiny, I found out that there was a dearth of clear communication within the team members and to the clients, lack of defined processes, and misaligned skill sets.\n\nTo rectify the situation, I implemented an open-door policy to encourage my team to voice their ideas and grievances unobtrusively. I scheduled regular meetings to prioritize our tasks and ensure that we were in sync with the project's objectives and deadlines. I also delegated roles based on each team member's strength and expertise, focusing on enhancing their skills instead of trivializing their weaknesses.\n\nMoreover, to better manage the project, I introduced the use of project management tools like Trello and Slack, which enhanced our workflow, increased productivity, ensured transparency, and significantly improved our communication with the client.\n\nBy the end of six months, the project was not just back on track but was completed two weeks ahead of the revised schedule. The outcome was a robust system that was praised by the government agency, and our company was able to retain a valuable client.\n\nThis experience cemented by belief in inclusive leadership and the power of effective communication. I learned that the key to being an efficient leader lies in motivating the team towards a shared vision, and I strive to carry these lessons into all of my leadership roles. I am confident that these invaluable experiences will prove advantageous in my ability to make challenging decisions and lead teams in your esteemed organization.",
+      "intended_style": "good",
+      "style_instruction": "You need to answer in a clear and specific manner, providing convincing details to make your story compelling.",
+      "human_rating": 5,
+      "human_notes": ""
+    },
+    {
+      "question": "Describe your most significant leadership experience.",
+      "response": "I was team leader for a project at my previous job and we successfully completed it in a timely manner.\n",
+      "intended_style": "superficial",
+      "style_instruction": "You should answer in a superficial manner, avoiding in-depth details that would make your response more engaging.",
+      "human_rating": 5,
+      "human_notes": ""
+    },
+    {
+      "question": "Tell me about a time when you had to handle a difficult client situation.",
+      "response": "In my previous positions, handling difficult clients was not uncommon. I've always found that maintaining my patience, being professional, and empathizing with the client helped to diffuse most problematic situations. My primary aim has always been to ensure client satisfaction and work towards improving client relationships, regardless of the complexities at hand. Of course, each situation is unique, and my approach evolves according to it.",
+      "intended_style": "brief",
+      "style_instruction": "You should respond in an overly general way, avoiding concrete details, even if you are asked to provide a detailed story.",
+      "human_rating": 4,
+      "human_notes": ""
+    }
+  ],
+  "analysis": {
+    "brief": {
+      "average_rating": 3.3333333333333335,
+      "num_samples": 3,
+      "rating_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 1,
+        "5": 0
+      }
+    },
+    "vague": {
+      "average_rating": 5.0,
+      "num_samples": 3,
+      "rating_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 3
+      }
+    },
+    "superficial": {
+      "average_rating": 5.0,
+      "num_samples": 3,
+      "rating_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 3
+      }
+    },
+    "good": {
+      "average_rating": 4.666666666666667,
+      "num_samples": 3,
+      "rating_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 1,
+        "5": 2
+      }
+    }
+  }
+}
