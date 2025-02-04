@@ -48,74 +48,128 @@ A structured record of all interviews with columns for:
 - The interview questions are configured for a UX/UI Designer position but can be modified in the code
 
 
-## Response Style Evaluation (response_evaluator.py)
+## Response Style Evaluation (response_evaluation.py)
 
 ### Purpose
-This script serves as a proof of concept to validate whether GPT can consistently generate interview responses that match specific quality labels (brief, vague, superficial, and good). It helps establish the reliability of the mock candidate responses in the main interview simulation.
+This script evaluates how accurately GPT-4 and Claude can generate interview responses matching specific response styles. It helps validate the models' ability to simulate various types of interview responses, from well-structured to problematic answers.
 
 ### What it Tests
-The script evaluates GPT's ability to generate responses across four styles:
-- **Brief**: Overly general responses lacking detail
-- **Vague**: Responses missing convincing specifics
-- **Superficial**: Surface-level answers without depth
-- **Good**: Clear, specific responses with compelling details
+The script evaluates 10 distinct response styles:
+
+1. **Complete, Well-Organized**
+   - Detailed responses with specific examples
+   - Includes metrics and clear outcomes
+   - Demonstrates structured planning and lessons learned
+   - Example: "In my previous role, I managed a project across three departments. We followed agile methodology... This led to a 20% efficiency increase..."
+
+2. **Brief, High-Level**
+   - Overly condensed responses
+   - Touches main points without depth
+   - Lacks supporting details
+   - Example: "I led a project with different teams. We used agile methods and completed it successfully."
+
+3. **Abstract**
+   - Uses metaphors instead of concrete examples
+   - Focuses on general principles
+   - Avoids specific experiences
+   - Example: "Leadership is like navigating a ship through a storm..."
+
+4. **Irrelevant**
+   - Demonstrates skills but from unrelated contexts
+   - Misaligned with question focus
+   - Example: "I once organized a community bake sale..."
+
+5. **Incomplete**
+   - Starts describing relevant situations
+   - Trails off without resolution
+   - Example: "I managed a project that required coordination between multiple teams, and it was..."
+
+6. **Rambling**
+   - Long, meandering responses
+   - Includes unnecessary details
+   - Lacks clear organization
+   - Example: "Well, there was this project I was working on, and it started with..."
+
+7. **Vague**
+   - General statements without specifics
+   - Unclear references
+   - Avoids concrete examples
+   - Example: "I was involved in a project that had several challenges..."
+
+8. **Tangential**
+   - Starts relevant but shifts focus
+   - Draws unexpected parallels
+   - Example: "Speaking of projects, have you ever tried organizing a group trip?"
+
+9. **Contradictory**
+   - Contains conflicting statements
+   - Undermines main points
+   - Example: "I'm excellent at managing projects and always finish on time, except..."
+
+10. **Defensive**
+    - Deflects responsibility
+    - Blames others
+    - Example: "The project didn't go as planned, but that wasn't my fault..."
+
+### Setup
+1. Create a `.env` file with your API keys:
+
+OPENAI_API_KEY=your_openai_key_here
+ANTHROPIC_API_KEY=your_anthropic_key_here
+
+2. Install requirements:
+
+pip install -r requirements.txt
 
 ### How it Works
 1. **Response Generation**
-   - Generates 3 responses per style (12 total)
-   - Uses real interview questions
-   - Applies style-specific instructions to GPT
+   - Generates 3 responses per style per model (60 total)
+   - Provides style-specific examples to guide generation
+   - Uses identical prompts across models
 
 2. **Human Evaluation Process**
-   - Presents responses in random order to prevent bias
-   - Shows:
-     - Interview question
-     - Generated response
-     - Intended style
-     - Style description
-   - Collects:
-     - Rating (1-5 scale)
-     - Optional evaluator notes
+   - Blind evaluation (evaluator doesn't know model source)
+   - Rates alignment with intended style (1-5 scale)
+   - Collects qualitative feedback
 
-3. **Analysis**
-   - Calculates average ratings per style
-   - Shows rating distribution
-   - Saves raw data and analysis for further study
+3. **Comparative Analysis**
+   - Per-model performance across styles
+   - Style-specific success rates
+   - Cross-model comparisons
 
-### Usage
+### Example Output
 
-1. Run the evaluator: `python3 response_evaluator.py`
+=== Evaluation Summary ===
 
-2. For each response:
-   - Read the question and response
-   - Consider how well it matches the intended style
-   - Rate from 1 (Poor match) to 5 (Perfect match)
-   - Add optional notes about the response quality
+Model: gpt-4
+Style: complete
+Average Rating: 4.67/5.0
+Number of Samples: 3
+Rating Distribution:
+  4: * (1)
+  5: ** (2)
 
-3. Review results:
-   - Terminal shows summary statistics
-   - Full data saved to `evaluation_results.json`
+Model: claude-3
+Style: complete
+Average Rating: 4.33/5.0
+Number of Samples: 3
+Rating Distribution:
+  4: * (1)
+  5: ** (2)
+...
 
 ### Data Collection
-Results are saved in `evaluation_results.json` containing:
-- Raw evaluation data
-  - Questions and responses
-  - Intended styles
-  - Human ratings and notes
-- Analysis per style
-  - Average ratings
-  - Sample counts
-  - Rating distributions
+Results in `evaluation_results.json` include:
+- Raw responses and ratings
+- Model identification
+- Style categorization
+- Human evaluator notes
+- Statistical analysis
 
-### Using as Proof of Concept
-This tool helps validate the interview simulation by:
-1. Quantifying GPT's ability to generate style-specific responses
-2. Collecting human evaluation data
-3. Providing statistical evidence of response quality
-4. Creating a dataset for future improvements
-
-The results can be used to:
-- Justify the use of GPT for mock interviews
-- Identify which response styles work best
-- Fine-tune style instructions
-- Document the system's effectiveness
+### Research Applications
+This evaluation helps:
+1. Validate AI models' ability to generate nuanced interview responses
+2. Compare model performance across different response styles
+3. Identify areas where models excel or struggle
+4. Inform prompt engineering strategies
+5. Support research in interview simulation systems
