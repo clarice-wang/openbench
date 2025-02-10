@@ -15,11 +15,11 @@ class Agent_A:
             self.role_a = 'Interviewer'
             self.role_b = 'Interviewee'
         # todo: other scenarios
-        self.backbone = oracle.Oracle(backbone, apikey, end_point)
+        self.backbone = oracle.Oracle(backbone, api_key, end_point)
     
     def update_conv(self, role, message):
         curr = self.hist_conv if self.hist_conv != "empty" else ""
-        return curr + "\n {role}: " + message
+        self.hist_conv = curr + f"\n {role}: " + message
 
     def update_conv_b(self, message):
         self.update_conv(self.role_b, message)
@@ -32,5 +32,5 @@ class Agent_A:
                                                            itr_left=self.a_params['itr_num']-i, itr_index=i)
         # todo: other scenarios
         new_q = self.backbone.query(prompt_sys_ass, prompt_user_ass, )['answer']
-        self.update_conv(role_a, new_q)
+        self.update_conv(self.role_a, new_q)
         return new_q
