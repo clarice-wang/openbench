@@ -31,9 +31,12 @@ DEEP_INFRA_BASE_URL = 'https://api.deepinfra.com/v1/openai'
 MODEL_LLAMA_3_8B = 'llama-3-8B'
 MODEL_LLAMA_3_70B = 'llama-3-70B'
 MODEL_MIXTRAL_8X7B = 'mixtral-8x7B'
+MODEL_DEEP_SEEK_R1 = 'deepseek-r1'
 DEEP_INFRA_MAP = {MODEL_LLAMA_3_8B: 'meta-llama/Meta-Llama-3-8B-Instruct',
                   MODEL_LLAMA_3_70B: 'meta-llama/Meta-Llama-3-70B-Instruct',
-                  MODEL_MIXTRAL_8X7B: 'mistralai/Mixtral-8x7B-Instruct-v0.1',}
+                  MODEL_MIXTRAL_8X7B: 'mistralai/Mixtral-8x7B-Instruct-v0.1',
+                  MODEL_DEEP_SEEK_R1: 'deepseek-ai/DeepSeek-R1',}
+
 # ollama
 OLLAMA_BASE_URL = 'https://u547021-8ded-55e5d1f2.cqa1.seetacloud.com:8443/api/generate/'
 MODEL_QWQ_32B = 'qwq_32b' #quant int4
@@ -44,7 +47,7 @@ OLLAMA_MAP = {MODEL_QWQ_32B: 'modelscope.cn/AI-ModelScope/QwQ-32B-Preview-GGUF:l
 openai_model_list = [MODEL_GPT4o_MINI, MODEL_GPT4o, MODEL_GPT4_TURBO, MODEL_EMBED_SMALL, MODEL_EMBED_LARGE]
 google_model_list = [MODEL_GEMINI_15_PRO, MODEL_GEMINI_15_FLASH, MODEL_GEMINI_1_PRO, MODEL_EMBED_GOOGLE]
 azure_model_list = [MODEL_PHI_3_MINI, MODEL_PHI_3_5_MINI, MODEL_PHI_3_SMALL, MODEL_PHI_3_MEDIUM]
-deepinfra_model_list = [MODEL_LLAMA_3_8B, MODEL_LLAMA_3_70B, MODEL_MIXTRAL_8X7B]
+deepinfra_model_list = [MODEL_LLAMA_3_8B, MODEL_LLAMA_3_70B, MODEL_MIXTRAL_8X7B, MODEL_DEEP_SEEK_R1]
 ollama_model_list = [MODEL_QWQ_32B, MODEL_QWQ_32B_Q8]
 all_model_list = []
 for l in [openai_model_list, google_model_list, azure_model_list, deepinfra_model_list, ollama_model_list]:

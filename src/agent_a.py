@@ -34,3 +34,11 @@ class Agent_A:
         new_q = self.backbone.query(prompt_sys_ass, prompt_user_ass, )['answer']
         self.update_conv(self.role_a, new_q)
         return new_q
+    
+    def answer_question(self, question):
+        # TODO: implement this
+        pass
+    
+    def answer_questionnaire(self, questionnaire):
+        # TODO: implement this
+        pass
