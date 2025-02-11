@@ -1,3 +1,7 @@
 openai
 anthropic
 python-dotenv
+google-generativeai
+azure-ai-inference
+tqdm
+requests
