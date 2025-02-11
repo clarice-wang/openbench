@@ -1,0 +1,55 @@
+{
+    "Topics": [
+      {
+        "Name": "Sales Performance",
+        "Attributes": {
+          "keyForProbe": true,
+          "strength": "strong",
+          "aggressiveness": 5,
+          "timePriority": 5,
+          "KnowledgeLevel": "Expert",
+          "YearsOfExperience": 8,
+          "Achievement": "Exceeded quota by 150% for 4 consecutive quarters",
+          "TeamSize": "Managing 12 sales representatives",
+          "Revenue": "Led team to $5M annual revenue"
+        }
+      },
+      {
+        "Name": "Client Relationship Management",
+        "Attributes": {
+          "keyForProbe": true,
+          "strength": "strong",
+          "aggressiveness": 4,
+          "timePriority": 4,
+          "KnowledgeLevel": "Expert",
+          "Tools": ["Salesforce", "HubSpot"],
+          "Achievement": "90% client retention rate",
+          "KeyAccounts": "Manages top 5 enterprise clients"
+        }
+      },
+      {
+        "Name": "Sales Analytics",
+        "Attributes": {
+          "keyForProbe": true,
+          "strength": "weak",
+          "aggressiveness": 2,
+          "timePriority": 3,
+          "KnowledgeLevel": "Basic",
+          "StrugglesWith": ["Advanced Data Analysis", "Forecasting Models"],
+          "FamiliarWith": ["Basic Reports", "Pipeline Tracking"]
+        }
+      },
+      {
+        "Name": "Team Development",
+        "Attributes": {
+          "keyForProbe": true,
+          "strength": "strong",
+          "aggressiveness": 3,
+          "timePriority": 4,
+          "KnowledgeLevel": "Advanced",
+          "Programs": ["Mentorship Program", "Sales Training"],
+          "Achievement": "Promoted 4 reps to senior positions"
+        }
+      }
+    ]
+  }
