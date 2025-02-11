@@ -1,5 +1,6 @@
 import prompts
 import oracle
+from utils import parser_find_list
 
 class Agent_C:
     def __init__(self, conv_hist, questionnaire, c_params, a_answers=None, backbone='gpt-4o', api_key=None, end_point=None):
@@ -14,23 +15,31 @@ class Agent_C:
         self.c_answers = []
 
     # answer questions
-    def answer_q(self, q):
+    def answer_q(self, q, debug=False):
         # step1: retrieve related pieces for the question
         prompt_sys_retrieve_ass = prompts.AGENT_C_RETRIEVE_SYS
         prompt_usr_retrieve_ass = prompts.AGENT_C_RETRIEVE_USR.format(hist_conv=self.conv_hist, role_a=self.c_params['role_a'],
                                                                       role_b=self.c_params['role_b'], question=q)
         retrieved = self.backbone.query(prompt_sys_retrieve_ass, prompt_usr_retrieve_ass)['answer']
+        retrieved = parser_find_list(retrieved)
+        if debug:
+            print(retrieved)
         # step2: answer the question
         prompt_sys_answer_ass = prompts.AGENT_C_ANSWER_SYS
         prompt_usr_answer_ass = prompts.AGENT_C_ANSWER_USR.format(hist_conv=self.conv_hist, role_a=self.c_params['role_a'],
                                                                   role_b=self.c_params['role_b'], question=q, retrieved=retrieved)
-        reason, answer = self.backbone.query(prompt_sys_answer_ass, prompt_usr_answer_ass)['answer']
-        return reason, answer
+        if debug:
+            print(prompt_sys_answer_ass)
+            print(prompt_usr_answer_ass)
+        reason_n_answer = self.backbone.query(prompt_sys_answer_ass, prompt_usr_answer_ass)['answer']
+        reason, answer = eval(parser_find_list(reason_n_answer))
+        return retrieved, reason, answer
 
     def answer_all(self,):
         c_answers = []
         for q in self.questionnaire['questions']:
-            _, answer = self.answer_q(q)
+            # TODO: may need to add try-except here since query or parsing may fail
+            _, _, answer = self.answer_q(q)
             c_answers.append(answer)
         self.c_answers = c_answers
         return c_answers

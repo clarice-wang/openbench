@@ -1,3 +1,16 @@
+AGENT_A_INTERVIEW_SYS = """
+You are an interview agent with in-depth knowledge of the {area} industry. You are skilled in asking interviewee questions and adept at following instructions.
+"""
+
+AGENT_A_INTERVIEW_USR = """
+Take a deep breath and complete the following task:
+For the recruitment of the {position}, the following key aspects (open qualifications) need to be thoroughly examined during the interview: {aspects}. By the end of the conversation, your primary goal is to gather as much information as possible from the interviewee regarding those key aspects.
+You have a question quota of {itr_num}. So far, you have asked {itr_index} questions and have {itr_left} questions left to ask.
+Here is the historical interview conversation between you (interviewer agent) and the interviewee: {hist_conv}. If the given history is 'empty', it means the conversation is just beginning, and you need to start the interview with a question.
+Your task now is to generate the next question. You can either follow up on the interviewee's last answer for more details or move on to the next question related to your area of interest.
+Please note that you should generate the question in a natural interviewer tone without any unnecessary explanations.
+"""
+
 AGENT_B_INTERVIEW_USR = """Please respond to the following interview question based on your script and conversation history:
 
 Question: {question}
@@ -47,19 +60,6 @@ Important rules:
 3. For weak topics (strength: "weak"), be brief or redirect
 4. Maintain consistency with all previously disclosed information
 5. Respond naturally but stay strictly within the script's bounds"""
-
-AGENT_A_INTERVIEW_SYS = """
-You are an interview agent with in-depth knowledge of the {area} industry. You are skilled in asking interviewee questions and adept at following instructions.
-"""
-
-AGENT_A_INTERVIEW_USR = """
-Take a deep breath and complete the following task:
-For the recruitment of the {position}, the following key aspects (open qualifications) need to be thoroughly examined during the interview: {aspects}. By the end of the conversation, your primary goal is to gather as much information as possible from the interviewee regarding those key aspects.
-You have a question quota of {itr_num}. So far, you have asked {itr_index} questions and have {itr_left} questions left to ask.
-Here is the historical interview conversation between you (interviewer agent) and the interviewee: {hist_conv}. If the given history is 'empty', it means the conversation is just beginning, and you need to start the interview with a question.
-Your task now is to generate the next question. You can either follow up on the interviewee's last answer for more details or move on to the next question related to your area of interest.
-Please note that you should generate the question in a natural interviewer tone without any unnecessary explanations.
-"""
 
 AGENT_C_INTERVIEW_HIST_CONV_EXAMPLE_01 = """
 Interviewer: Can you please share which master's or PhD program you are currently enrolled in, and how it aligns with the role of a Research Intern in the Algorithms Group?
@@ -163,7 +163,7 @@ Moreover, the most relevant pieces of the {role_b}’s answers to the proposed q
 {retrieved}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You should focus on the relevant pieces retrieved and may also reference the original conversation to complete the following tasks: (1) First, carefully determine whether the current information is sufficient to answer the proposed multiple-choice question. If it is not, return “None” as an identifier; (2) If it is sufficient, select the correct answer and provide a concise reason in no more than a few of sentences.
-Remember, you should provide the reasoning and the final answer in a Python-style list of two strings. Regardless of whether the retrieved information is sufficient, you should provide the reasoning first (as the first element in the list) and then the selection answer (or “None”).
+Remember, you should provide the reasoning and the final answer in a Python-style list of two strings. Regardless of whether the retrieved information is sufficient, you should provide the reasoning first (as the first element in the list) and then the selection answer (or “None”). Notice, you should strictly follow the instruction and return NOTHING BUT A PYTHON LIST which can be directly parsed by a eval() function.
 The following are some examples:
 Example 1 in the interview case:
 ========== Example conversation (1) between the interviewer and interviewee ==========
