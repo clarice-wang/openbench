@@ -5,6 +5,9 @@ import json
 from oracle import Oracle
 import agent_b
 import prompts
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def test_agent_b(model_name, script_path):
     """Test Agent B with a specific model and script"""
@@ -78,9 +81,9 @@ def main():
     models = {
         "1": "gpt-4o-mini",
         "2": "gpt-4o",
-        "3": "gemini-1.5-pro",
-        "4": "phi-3-mini",
-        "5": "llama-3-8B"
+        # "3": "gemini-1.5-pro",
+        # "4": "phi-3-mini",
+        # "5": "llama-3-8B"
     }
     
     # Select script

@@ -1,3 +1,22 @@
+AGENT_B_INTERVIEW_USR = """Please respond to the following interview question based on your script and conversation history:
+
+Question: {question}
+
+Previous conversation history:
+{hist_conv}
+
+Information already disclosed:
+{disclosed_info}
+
+Remember to:
+1. Only share information from your script
+2. Be enthusiastic and detailed about strong topics
+3. Be brief or redirect for weak topics
+4. Stay consistent with previously disclosed information
+5. Maintain a natural, conversational tone while staying within script bounds
+
+Please provide your response to the interviewer's question."""
+
 SCRIPT_EXPLANATION = """The script is structured as follows:
 
 1. Topics: Each topic represents a knowledge area (e.g., Python, Statistics) and contains:

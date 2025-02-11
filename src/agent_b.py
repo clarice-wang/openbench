@@ -22,7 +22,7 @@ class Agent_B:
             self.role_b = 'Interviewee'
             
         # Initialize state tracking
-        self.disclosed_info = {topic["Name"]: set() for topic in self.script["Topics"]}
+        self.disclosed_info = {topic["Name"]: [] for topic in self.script["Topics"]}
         self.backbone = oracle.Oracle(backbone, api_key, end_point)
     
     def _validate_script(self):
@@ -50,16 +50,16 @@ class Agent_B:
                 script=script_str
             )
             
+            # Convert disclosed_info to JSON-serializable format
+            disclosed_info_str = json.dumps(self.disclosed_info, indent=2)
+            
             prompt_user = prompts.AGENT_B_INTERVIEW_USR.format(
                 question=question,
                 hist_conv=self.hist_conv,
-                disclosed_info=json.dumps(self.disclosed_info, indent=2)
+                disclosed_info=disclosed_info_str
             )
             
             response = self.backbone.query(prompt_sys, prompt_user)['answer']
             self.update_conv(self.role_b, response)
-            
-            # Update disclosed information tracking (this could be enhanced with NLP)
-            # For now, we'll rely on the LLM to maintain consistency via the prompt
             
             return response
