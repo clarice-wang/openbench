@@ -112,7 +112,7 @@ Now, a multiple-choice question is proposed based on the above conversation, ask
 ++++++++++++++++++ Multiple-choice question ++++++++++++++++++
 {question}
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Remember, you should provide the pieces of  {role_b}’s answers you found in the conversation in a Python-style list of strings. Each string should be sentence-like and of normal length. In case {role_b}’s answers are totally unrelated to the question, you should return an empty Python list ([]).
+Remember, you should provide the pieces of  {role_b}’s answers you found in the conversation as a Python-style list of strings. Each string should be sentence-like and of normal length. In case you are confident that {role_b}’s answers are totally unrelated to the question, you should return an empty Python list ([]). Be careful to retrieve all the pieces directly related to this question, ensuring nothing is left out.
 The following are some examples:
 Example 1 in the interview case:
 ========== Example conversation (1) between the interviewer and interviewee ==========
@@ -162,7 +162,7 @@ Moreover, the most relevant pieces of the {role_b}’s answers to the proposed q
 ~~~~~~~~~~~~~~~~~~ Retrieved relevant pieces ~~~~~~~~~~~~~~~~~~
 {retrieved}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-You should focus on the relevant pieces retrieved and may also reference the original conversation to complete the following tasks: (1) First, carefully determine whether the current information is sufficient to answer the proposed multiple-choice question. If it is not, return “None” as an identifier; (2) If it is sufficient, select the correct answer and provide a concise reason in no more than a few of sentences.
+You should focus on the relevant pieces retrieved and may reference the original conversation to complete the following tasks: (1) First, carefully determine whether the current information is sufficient to answer the proposed multiple-choice question. If you are confident it is not, return 'None' as an identifier. (2) If you believe it is sufficient, please carefully read all the options, understand them thoroughly, and infer which option best fits the real situation. Before providing your selection, you need to provide a concise reason in no more than a few sentences.
 Remember, you should provide the reasoning and the final answer in a Python-style list of two strings. Regardless of whether the retrieved information is sufficient, you should provide the reasoning first (as the first element in the list) and then the selection answer (or “None”). Notice, you should strictly follow the instruction and return NOTHING BUT A PYTHON LIST which can be directly parsed by a eval() function.
 The following are some examples:
 Example 1 in the interview case:
