@@ -1,9 +1,9 @@
 import prompts
 import oracle
-from utils import parser_find_list
+from utils import parser_find_list, DEFAULT_BACKBONE_CONFIG
 
 class Agent_C:
-    def __init__(self, conv_hist, questionnaire, c_params, a_answers=None, backbone='gpt-4o', api_key=None, end_point=None):
+    def __init__(self, conv_hist, questionnaire, c_params, a_answers=None, backbone_config=DEFAULT_BACKBONE_CONFIG,):
         # questionnaire: {"questions":[], "gts":[]}
         # c_params: {"role_a", "role_b"}
         # a_answers: agent_a's answer on the questionnaire's questions
@@ -11,7 +11,12 @@ class Agent_C:
         self.questionnaire = questionnaire
         self.c_params = c_params
         self.a_answers = a_answers
-        self.backbone = oracle.Oracle(backbone, api_key, end_point)
+        backbone_model = backbone_config['model']
+        api_key = backbone_config['api_key']
+        end_point = backbone_config['end_point']
+        self.temp = backbone_config['temp']
+        self.top_p = backbone_config['top_p']
+        self.backbone = oracle.Oracle(backbone_model, api_key, end_point)
         self.c_answers = []
 
     # answer questions
@@ -20,7 +25,7 @@ class Agent_C:
         prompt_sys_retrieve_ass = prompts.AGENT_C_RETRIEVE_SYS
         prompt_usr_retrieve_ass = prompts.AGENT_C_RETRIEVE_USR.format(hist_conv=self.conv_hist, role_a=self.c_params['role_a'],
                                                                       role_b=self.c_params['role_b'], question=q)
-        retrieved = self.backbone.query(prompt_sys_retrieve_ass, prompt_usr_retrieve_ass)['answer']
+        retrieved = self.backbone.query(prompt_sys_retrieve_ass, prompt_usr_retrieve_ass, self.temp, self.top_p)['answer']
         retrieved = parser_find_list(retrieved)
         if debug:
             print(retrieved)
@@ -31,7 +36,7 @@ class Agent_C:
         if debug:
             print(prompt_sys_answer_ass)
             print(prompt_usr_answer_ass)
-        reason_n_answer = self.backbone.query(prompt_sys_answer_ass, prompt_usr_answer_ass)['answer']
+        reason_n_answer = self.backbone.query(prompt_sys_answer_ass, prompt_usr_answer_ass, self.temp, self.top_p)['answer']
         reason, answer = eval(parser_find_list(reason_n_answer))
         return retrieved, reason, answer
 

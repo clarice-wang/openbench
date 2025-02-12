@@ -2,9 +2,10 @@ import json
 from openai import OpenAI
 import oracle
 import prompts
+from utils import DEFAULT_BACKBONE_CONFIG
 
 class Agent_B:
-    def __init__(self, script_path, sce='interview', backbone='gpt-4', api_key=None, end_point=None):
+    def __init__(self, script_path, sce='interview', backbone_config=DEFAULT_BACKBONE_CONFIG,):
         assert sce in ['interview'], f'err: {sce} scenario is not supported yet.'
         self.sce = sce
         self.hist_conv = 'empty'
@@ -23,7 +24,12 @@ class Agent_B:
             
         # Initialize state tracking
         self.disclosed_info = {topic["Name"]: [] for topic in self.script["Topics"]}
-        self.backbone = oracle.Oracle(backbone, api_key, end_point)
+        backbone_model = backbone_config['model']
+        api_key = backbone_config['api_key']
+        end_point = backbone_config['end_point']
+        self.temp = backbone_config['temp']
+        self.top_p = backbone_config['top_p']
+        self.backbone = oracle.Oracle(backbone_model, api_key, end_point)
     
     def _validate_script(self):
         """Validates that the script contains required fields and structure"""
@@ -59,7 +65,7 @@ class Agent_B:
                 disclosed_info=disclosed_info_str
             )
             
-            response = self.backbone.query(prompt_sys, prompt_user)['answer']
+            response = self.backbone.query(prompt_sys, prompt_user, self.temp, self.top_p)['answer']
             self.update_conv(self.role_b, response)
             
             return response

@@ -1,10 +1,9 @@
-import os
-from openai import OpenAI
 import oracle
 import prompts
+from utils import DEFAULT_BACKBONE_CONFIG
 
 class Agent_A:
-    def __init__(self, a_params, sce='interview', backbone='gpt-4o', api_key=None, end_point=None):
+    def __init__(self, a_params, sce='interview', backbone_config=DEFAULT_BACKBONE_CONFIG,):
         assert sce in ['interview'], f'err: {sce} scenario is not supported yet.'
         self.a_params = a_params
         self.sce = sce
@@ -14,8 +13,14 @@ class Agent_A:
             self.usr_prompt_temp = prompts.AGENT_A_INTERVIEW_USR
             self.role_a = 'Interviewer'
             self.role_b = 'Interviewee'
-        # todo: other scenarios
-        self.backbone = oracle.Oracle(backbone, api_key, end_point)
+        # todo: add prompts for other scenarios
+        # self.backbone_config = backbone_config
+        backbone_model = backbone_config['model']
+        api_key = backbone_config['api_key']
+        end_point = backbone_config['end_point']
+        self.temp = backbone_config['temp']
+        self.top_p = backbone_config['top_p']
+        self.backbone = oracle.Oracle(backbone_model, api_key, end_point)
     
     def update_conv(self, role, message):
         curr = self.hist_conv if self.hist_conv != "empty" else ""
@@ -31,7 +36,7 @@ class Agent_A:
                                                            hist_conv=self.hist_conv, itr_num=self.a_params['itr_num'],
                                                            itr_left=self.a_params['itr_num']-i, itr_index=i)
         # todo: other scenarios
-        new_q = self.backbone.query(prompt_sys_ass, prompt_user_ass, )['answer']
+        new_q = self.backbone.query(prompt_sys_ass, prompt_user_ass, self.temp, self.top_p)['answer']
         self.update_conv(self.role_a, new_q)
         return new_q
     
