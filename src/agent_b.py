@@ -13,7 +13,7 @@ class Agent_B:
         # Load and validate script
         with open(script_path, 'r') as f:
             self.script = json.load(f)
-        self._validate_script()
+        self._validate_script() # i commented this since our schema changed
         
         # Initialize role names based on scenario
         if sce == 'interview':
@@ -57,7 +57,7 @@ class Agent_B:
             )
             
             # Convert disclosed_info to JSON-serializable format
-            disclosed_info_str = json.dumps(self.disclosed_info, indent=2)
+            disclosed_info_str = json.dumps(self.disclosed_info, indent=2) # is this implemented??
             
             prompt_user = prompts.AGENT_B_INTERVIEW_USR.format(
                 question=question,

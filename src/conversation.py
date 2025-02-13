@@ -5,6 +5,7 @@ import agent_c
 class Conversation:
     def __init__(self, a_params, b_path, questionnaire, c_params, backbone_configs, itr_num, a_answers=None, sce='interview',):
         # backbone_configs: {"a": back_config_a, ...}
+        # itr_num: constrained iteration number
         self.sce = sce
         self.backbone_configs = backbone_configs
         self.questionnaire = questionnaire
@@ -16,7 +17,7 @@ class Conversation:
         self.agent_b = agent_b.Agent_B(b_path, sce, backbone_configs['b'])
         self.agent_c = None
     
-    def start_conv(self,):
+    def run(self,):
         for itr_index in range(self.itr_num):
             new_q = self.agent_a.ask(itr_index)
             self.agent_b.update_conv(new_q)

@@ -11,55 +11,61 @@ Your task now is to generate the next question. You can either follow up on the 
 Please note that you should generate the question in a natural interviewer tone without any unnecessary explanations.
 """
 
-AGENT_B_INTERVIEW_USR = """Please respond to the following interview question based on your script and conversation history:
+AGENT_B_INTERVIEW_SYS = """
+You are an interviewee in an open-ended interview. You will be provided with an interviewee script that defines your various topics which may describe your knowledge, skills, experience, motivation, opinion, and behavior patterns.
 
-Question: {question}
+The following is the explanation of the script:
+{script_explanation}
 
-Previous conversation history:
+Your interviewee scripts as follows:
+{script}
+
+When generating your response, you should strictly and rigorously follow the following rules:
+1. Response strictly follow the interviewee’s script, you may carefully make some reasonable inferences with your real-world knowledge only if it is necessary, but make sure never out of the script.
+2. Stay consistent with previously disclosed information.
+3. Maintain a natural, conversational tone while staying within script bounds.
+4. You should always follow the "behavior pattern" topics when generating the response since they are important and define how you should react to others' questions.
+"""
+
+SCRIPT_EXPLANATION = """
+The script is structured as follows:
+
+1. Topics: Each topic accords to one of the following categories: skill, knowledge, experience, motivation, opinion, and behavior pattern.
+   - Name: the topic identifier
+   - Attributes: there are some general attributes for all category topics, for example “category, ”, “description”, “example”, “scope” and “dependency”. Other attributes are specific to the category, for example, a “knowledge” topic can include attributes like “confidence”, “width” and “depth”. But only the “category” and “description” are mandatory for all the topics.
+- NOTICE THAT  “BEHAVIOR PATTERN” IS A SPECIAL KIND OF TOPIC, it consistently works and affects how you should respond to the interviewer. So please take a careful look at these kinds of topics and ensure your response aligns with all of them.
+
+2. Detailed explanation of attributes:
+category: indicates which aspect of the interviewee's characteristics this topic describes
+description: a piece of free text defines the 
+examples: some cases/use cases/instances of this topic
+scope: further specifies in which conversation cases this topic should be emphasized/ explicitly triggered
+dependency: some topics can closely relate to some other topics, e.g., an opinion can depend on a special experience
+confidence: 
+"""
+
+AGENT_B_INTERVIEW_USR = """
+Please take a deep breath and do the following task:
+Please simulate as the interviewee and respond to the following interview question strictly and rigorously based on your script and conversation history:
+
+========== Previous conversation history ==========
 {hist_conv}
+===========================================
 
 Information already disclosed:
 {disclosed_info}
 
-Remember to:
-1. Only share information from your script
-2. Be enthusiastic and detailed about strong topics
-3. Be brief or redirect for weak topics
-4. Stay consistent with previously disclosed information
-5. Maintain a natural, conversational tone while staying within script bounds
+++++++++++++++++++ Interviewer’s question ++++++++++++++++++
+ {question}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+When generating your response, you should strictly and rigorously follow the following rules:
+1. Response strictly follow the interviewee’s script, you may carefully make some reasonable inferences with your real-world knowledge only if it is necessary, but make sure never out of the script.
+2. Stay consistent with previously disclosed information.
+3. Maintain a natural, conversational tone while staying within script bounds.
+4. You should always follow the "behavior pattern" topics when generating the response since they are important and define how you should react to others' questions.
 
-Please provide your response to the interviewer's question."""
-
-SCRIPT_EXPLANATION = """The script is structured as follows:
-
-1. Topics: Each topic represents a knowledge area (e.g., Python, Statistics) and contains:
-   - Name: The topic identifier
-   - Attributes: Key-value pairs that define your knowledge and behavior, including:
-     * keyForProbe: If true, this is a critical topic that should be discussed
-     * strength: Whether you are "strong" or "weak" in this area
-     * aggressiveness: How proactively you should mention (strong) or avoid (weak) this topic
-     * timePriority: How important it is to discuss this early
-     * Other specific attributes like KnowledgeLevel, YearsOfExperience, etc.
-
-2. Behavioral Guidelines:
-   - For "strong" topics: Be confident, provide detailed answers, and occasionally steer conversation toward these areas
-   - For "weak" topics: Be more reserved, give shorter answers, and tactfully redirect if possible
-   - Never contradict the script or invent details not present
-   - Maintain consistent answers throughout the conversation"""
-
-AGENT_B_INTERVIEW_SYS = """You are an interviewee in a technical interview. You will be provided with a script that defines your knowledge, experience, and behavior.
-
-{script_explanation}
-
-Your script:
-{script}
-
-Important rules:
-1. Never introduce information not present in the script
-2. For strong topics (strength: "strong"), be enthusiastic and detailed
-3. For weak topics (strength: "weak"), be brief or redirect
-4. Maintain consistency with all previously disclosed information
-5. Respond naturally but stay strictly within the script's bounds"""
+Now please provide your natural response as a/an interviewee to the interviewer's question.
+"""
 
 AGENT_C_INTERVIEW_HIST_CONV_EXAMPLE_01 = """
 Interviewer: Can you please share which master's or PhD program you are currently enrolled in, and how it aligns with the role of a Research Intern in the Algorithms Group?
