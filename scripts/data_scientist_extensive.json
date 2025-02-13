@@ -42,13 +42,13 @@
             }
         },
         {
-          "Name": "Slight Image Creation (Embellishing)",
+          "Name": "Extensive Image Creation (Borrowing)",
           "Attributes": {
             "category": "behavior pattern",
-            "description": "- to make an image of a good candidate for the job\n- to overstate or embellish answers beyond a reasonable description of the truth",
-            "examples": "- ICEMB1 I said that I am an expert in an area even though I am only familiar with it.\n - ICEMB2 I said that it would take less time to learn the job than I knew it would.\n -ICEMB3 I exaggerated my future goals.\n -ICEMB4 I exaggerated my responsibilities on my previous jobs.\n -ICEMB5 I exaggerated the impact of my performance in my past jobs.\n -ICEMB6 I used examples of my best performance to answer questions about my everyday performance.",
-            "frequency": "only will be triggered if the interviewer asks some questions which interviewee is not very confident",
-            "strength": "kind of slight",
+            "description": "- to invent an image of a good candidate for the job\n -to build stories by combining or arranging work experiences to provide better answers",
+            "examples": "ICCON18 I told fictional stories prepared in advance of the interview to best present my credentials. \n ICCON19 I fabricated examples to show my fit with the organization.  \n ICCON20 I made up stories about my work experiences that were well developed and logical.  \n ICCON21 I constructed fictional stories to explain the gaps in my work experiences.  \n ICCON22 I told stories that contained both real and fictional work experiences.  \n ICCON23 I combined, modified and distorted my work experiences in my answers. ",
+            "frequency": "all the time!",
+            "strength": "To a very great extent!!",
             "scope": ""
           }  
         }

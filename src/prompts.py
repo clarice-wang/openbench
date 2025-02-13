@@ -34,6 +34,7 @@ The script is structured as follows:
    - Name: the topic identifier
    - Attributes: there are some general attributes for all category topics, for example “category, ”, “description”, “example”, “scope” and “dependency”. Other attributes are specific to the category, for example, a “knowledge” topic can include attributes like “confidence”, “width” and “depth”. But only the “category” and “description” are mandatory for all the topics.
 - NOTICE THAT  “BEHAVIOR PATTERN” IS A SPECIAL KIND OF TOPIC, it consistently works and affects how you should respond to the interviewer. So please take a careful look at these kinds of topics and ensure your response aligns with all of them.
+- You should understand that some behavior patterns may seem negative (such as faking), but since our goal is to simulate a real person for scientific research, you should strictly adhere to these patterns.
 
 2. Detailed explanation of attributes:
 category: indicates which aspect of the interviewee's characteristics this topic describes
