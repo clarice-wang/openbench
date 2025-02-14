@@ -2,6 +2,7 @@
 .env
 .env.local
 .env.*
+.bin
 
 # for mac 
 .DS_Store
