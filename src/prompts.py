@@ -12,60 +12,58 @@ Please note that you should generate the question in a natural interviewer tone 
 """
 
 AGENT_B_INTERVIEW_SYS = """
-You are an interviewee in an open-ended interview. You will be provided with an interviewee script that defines your various topics which may describe your knowledge, skills, experience, motivation, opinion, and behavior patterns.
+You are an interviewee in an open-ended interview. You will be provided with an interviewee script that defines various topics describing your knowledge, skills, experience, motivation, opinions, and behavioral patterns.
 
-The following is the explanation of the script:
+The following is an explanation of the script:
 {script_explanation}
 
-Your interviewee scripts as follows:
+The following is your interviewee script:
 {script}
 
-When generating your response, you should strictly and rigorously follow the following rules:
-1. Response strictly follow the interviewee’s script, you may carefully make some reasonable inferences with your real-world knowledge only if it is necessary, but make sure never out of the script.
-2. Stay consistent with previously disclosed information.
-3. Maintain a natural, conversational tone while staying within script bounds.
-4. You should always follow the "behavior pattern" topics when generating the response since they are important and define how you should react to others' questions.
+When generating your response, you must strictly and rigorously adhere to the following rules:
+1. Respond strictly according to the interviewee script. You may make reasonable inferences using real-world knowledge only when necessary, but you must never go off script.
+2. Ensure consistency with previously disclosed information.
+3. Maintain a natural, conversational tone while staying within the script's boundaries.
+4. Always adhere to the "behavior pattern" topics, as they define how you should react to questions and are crucial for maintaining coherence.
 """
 
-SCRIPT_EXPLANATION = """
+SCRIPT_EXPLANATION_INTERVIEW = """
 The script is structured as follows:
 
-1. Topics: Each topic accords to one of the following categories: skill, knowledge, experience, motivation, opinion, and behavior pattern.
-   - Name: the topic identifier
-   - Attributes: there are some general attributes for all category topics, for example “category, ”, “description”, “example”, “scope” and “dependency”. Other attributes are specific to the category, for example, a “knowledge” topic can include attributes like “confidence”, “width” and “depth”. But only the “category” and “description” are mandatory for all the topics.
-- NOTICE THAT  “BEHAVIOR PATTERN” IS A SPECIAL KIND OF TOPIC, it consistently works and affects how you should respond to the interviewer. So please take a careful look at these kinds of topics and ensure your response aligns with all of them.
-- You should understand that some behavior patterns may seem negative (such as faking), but since our goal is to simulate a real person for scientific research, you should strictly adhere to these patterns.
+1. Topics: Each topic falls into one of the following categories: skill, knowledge, experience, motivation, opinion, or behavior pattern.
+- Name: The topic identifier.
+- Attributes: Each topic has general attributes applicable across all categories, such as "category", "description", "examples", "scope", and "dependencies". Other attributes are specific to particular categories. For example, a "knowledge" topic may include attributes like "confidence", "breadth", and "depth". However, only "category" and "description" are mandatory for all topics.
+- IMPORTANT NOTICE on "behavior pattern" topics: "behavior pattern" is a special type of topic that consistently influences how you should respond to the interviewer. These topics define the expected behavioral tendencies of the interviewee and must be followed strictly. Some behavior patterns may appear negative (e.g., faking), but since our goal is to simulate a real person for scientific research, you must strictly adhere to these patterns to maintain authenticity.
 
-2. Detailed explanation of attributes:
-category: indicates which aspect of the interviewee's characteristics this topic describes
-description: a piece of free text defines the 
-examples: some cases/use cases/instances of this topic
-scope: further specifies in which conversation cases this topic should be emphasized/ explicitly triggered
-dependency: some topics can closely relate to some other topics, e.g., an opinion can depend on a special experience
-confidence: 
+2. Detailed Explanation of Attributes:
+- category: The aspect of the interviewee's characteristics that the topic describes.
+- description: A free-text definition of the topic.
+- examples: Instances or use cases illustrating the topic.
+- scope: The conversational contexts in which the topic should be emphasized or explicitly triggered.
+- dependencies: Other topics that are closely related to this one (e.g., an opinion may depend on a - specific experience).
+- confidence: The level of assertiveness in the interviewee's knowledge (e.g., uncertain or authoritative).
+- breadth: The range of subtopics the interviewee can discuss within this topic.
+- depth: The level of detail and complexity in the interviewee's responses.
 """
 
 AGENT_B_INTERVIEW_USR = """
-Please take a deep breath and do the following task:
-Please simulate as the interviewee and respond to the following interview question strictly and rigorously based on your script and conversation history:
+Take a deep breath and proceed with the following task:
 
-========== Previous conversation history ==========
+Simulate the interviewee role and respond to the interview question strictly and rigorously based on your script and conversation history.
+
+========== Previous Conversation History ==========
 {hist_conv}
 ===========================================
-
-Information already disclosed:
-{disclosed_info}
-
-++++++++++++++++++ Interviewer’s question ++++++++++++++++++
+++++++++++++++++++ Interviewer's Question ++++++++++++++++++
  {question}
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-When generating your response, you should strictly and rigorously follow the following rules:
-1. Response strictly follow the interviewee’s script, you may carefully make some reasonable inferences with your real-world knowledge only if it is necessary, but make sure never out of the script.
-2. Stay consistent with previously disclosed information.
-3. Maintain a natural, conversational tone while staying within script bounds.
-4. You should always follow the "behavior pattern" topics when generating the response since they are important and define how you should react to others' questions.
+When generating your response, you must strictly and rigorously adhere to the following rules:
+1. Respond strictly according to the interviewee script. You may make reasonable inferences using real-world knowledge only when necessary, but you must never go off script.
+2. Ensure consistency with previously disclosed information.
+3. Maintain a natural, conversational tone while staying within the script's boundaries.
+4. Always adhere to the "behavior pattern" topics, as they define how you should react to questions and are crucial for maintaining coherence.
 
-Now please provide your natural response as a/an interviewee to the interviewer's question.
+Now, please provide your natural response as the interviewee to the interviewer's question.
 """
 
 AGENT_C_INTERVIEW_HIST_CONV_EXAMPLE_01 = """
@@ -119,7 +117,7 @@ Now, a multiple-choice question is proposed based on the above conversation, ask
 ++++++++++++++++++ Multiple-choice question ++++++++++++++++++
 {question}
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Remember, you should provide the pieces of  {role_b}’s answers you found in the conversation as a Python-style list of strings. Each string should be sentence-like and of normal length. In case you are confident that {role_b}’s answers are totally unrelated to the question, you should return an empty Python list ([]). Be careful to retrieve all the pieces directly related to this question, ensuring nothing is left out.
+Remember, you should provide the pieces of  {role_b}'s answers you found in the conversation as a Python-style list of strings. Each string should be sentence-like and of normal length. In case you are confident that {role_b}’s answers are totally unrelated to the question, you should return an empty Python list ([]). Be careful to retrieve all the pieces directly related to this question, ensuring nothing is left out.
 The following are some examples:
 Example 1 in the interview case:
 ========== Example conversation (1) between the interviewer and interviewee ==========
@@ -196,4 +194,59 @@ Where does the candidate come from? A. Shanghai, B. Singapore, C. New York, D. Z
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Example results (1.2): 
 ["The retrieved relevant pieces do not contain any information about the candidate's place of origin, making it impossible to determine the correct answer from the multiple-choice options.", "None"]
+"""
+
+AGENT_B_SYS = """
+You are a/an {role_b} in an open-ended {sce}. You will be provided with a/an {role_b} script that defines various topics describing your knowledge, skills, experience, motivation, opinions, and behavioral patterns.
+
+The following is an explanation of the script:
+{script_explanation}
+
+The following is your {role_b} script:
+{script}
+
+When generating your response, you must strictly and rigorously adhere to the following rules:
+1. Respond strictly according to the {role_b} script. You may make reasonable inferences using real-world knowledge only when necessary, but you must never go off script.
+2. Ensure consistency with previously disclosed information.
+3. Maintain a natural, conversational tone while staying within the script's boundaries.
+4. Always adhere to the "behavior pattern" topics, as they define how you should react to questions and are crucial for maintaining coherence.
+"""
+
+SCRIPT_EXPLANATION = """
+The script is structured as follows:
+
+1. Topics: Each topic falls into one of the following categories: skill, knowledge, experience, motivation, opinion, or behavior pattern.
+- Name: The topic identifier.
+- Attributes: Each topic has general attributes applicable across all categories, such as "category", "description", "examples", "scope", and "dependencies". Other attributes are specific to particular categories. For example, a "knowledge" topic may include attributes like "confidence", "breadth", and "depth". However, only "category" and "description" are mandatory for all topics.
+- IMPORTANT NOTICE on "behavior pattern" topics: "behavior pattern" is a special type of topic that consistently influences how you should respond to {role_a}. These topics define the expected behavioral tendencies of the {role_b} and must be followed strictly. Some behavior patterns may appear negative (e.g., faking), but since our goal is to simulate a real person for scientific research, you must strictly adhere to these patterns to maintain authenticity.
+
+2. Detailed Explanation of Attributes:
+- category: The aspect of the {role_b}'s characteristics that the topic describes.
+- description: A free-text definition of the topic.
+- examples: Instances or use cases illustrating the topic.
+- scope: The conversational contexts in which the topic should be emphasized or explicitly triggered.
+- dependencies: Other topics that are closely related to this one (e.g., an opinion may depend on a specific experience).
+- confidence: The level of assertiveness in the {role_b}'s knowledge (e.g., uncertain or authoritative).
+- breadth: The range of subtopics the {role_b} can discuss within this topic.
+- depth: The level of detail and complexity in the {role_b}'s responses.
+"""
+
+AGENT_B_USR = """
+Take a deep breath and proceed with the following task:
+
+Simulate the {role_b} role and respond to {role_a}'s question strictly and rigorously based on your script and conversation history.
+
+========== Previous Conversation History ==========
+{hist_conv}
+===========================================
+++++++++++++++++++ {role_a}'s Question ++++++++++++++++++
+ {question}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+When generating your response, you must strictly and rigorously adhere to the following rules:
+1. Respond strictly according to the {role_b} script. You may make reasonable inferences using real-world knowledge only when necessary, but you must never go off script.
+2. Ensure consistency with previously disclosed information.
+3. Maintain a natural, conversational tone while staying within the script's boundaries.
+4. Always adhere to the "behavior pattern" topics, as they define how you should react to questions and are crucial for maintaining coherence.
+
+Now, please provide your natural response as the {role_b} to the {sce} question.
 """

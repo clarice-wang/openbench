@@ -1,0 +1,90 @@
+{
+  "Topics": [
+    {
+      "Name": "Sales",
+      "Attributes": {
+        "category": "experience",
+        "description": "Three years of progressive experience in B2B sales, consistently exceeding quarterly targets and managing key client accounts. Specialized in software and technology sales with deal sizes ranging from $50K to $500K.",
+        "duration": "3 years",
+        "confidence": "confident, willing to discuss details",
+        "examples": "- Closed $2M deal with Fortune 500 client in 2023\n- Maintained 120% quota achievement over three years\n- Developed new territory from $500K to $3M annual revenue",
+        "scope": "willing to discuss all aspects of sales experience"
+      }
+    },
+    {
+      "Name": "Leadership",
+      "Attributes": {
+        "category": "experience",
+        "description": "One year of experience leading a small sales team of 4 representatives. Still developing leadership capabilities and learning to delegate effectively.",
+        "duration": "1 year",
+        "confidence": "somewhat hesitant, still learning",
+        "examples": "- Implemented new CRM tracking system\n- Conducted weekly sales meetings\n- Struggled with performance management conversations",
+        "scope": "prefer to focus on process improvements rather than people management"
+      }
+    },
+    {
+      "Name": "Negotiation",
+      "Attributes": {
+        "category": "skill",
+        "description": "Expert-level negotiation abilities with strong track record in complex deal structures. Particularly skilled in value-based negotiation and handling pricing objections.",
+        "proficiency": "expert",
+        "confidence": "very confident, eager to demonstrate expertise",
+        "examples": "- Negotiated 15% higher prices than company standard\n- Developed new pricing model for enterprise clients\n- Successfully restructured troubled contracts",
+        "scope": "comfortable discussing any negotiation scenario"
+      }
+    },
+    {
+      "Name": "Interpersonal",
+      "Attributes": {
+        "category": "skill",
+        "description": "Struggles with building rapport and maintaining team relationships. Direct communication style often perceived as abrasive or confrontational.",
+        "proficiency": "poor",
+        "confidence": "defensive when discussing this topic",
+        "examples": "- Received feedback about aggressive communication style\n- Multiple team members requested transfers\n- Difficulty in collaborative projects",
+        "scope": "prefers to avoid discussing interpersonal dynamics"
+      }
+    },
+    {
+      "Name": "Management Style",
+      "Attributes": {
+        "category": "behavior pattern",
+        "description": "Task-oriented manager focused on metrics and results. Tends to prioritize numbers over team morale. Shows limited empathy and struggles with emotional intelligence in leadership situations.",
+        "examples": "- Emphasizes KPIs and metrics in team meetings\n- Limited one-on-one coaching sessions\n- Resistance to addressing team culture issues",
+        "frequency": "consistent pattern",
+        "strength": "strong tendency to focus on tasks over people",
+        "scope": "will discuss management philosophy but defensive about style criticisms"
+      }
+    },
+    {
+      "Name": "Sales Methodology",
+      "Attributes": {
+        "category": "knowledge",
+        "description": "Strong understanding of solution selling and value-based sales approaches. Well-versed in sales pipeline management and forecasting methodologies.",
+        "confidence": "highly confident, detailed knowledge",
+        "examples": "- Implemented MEDDIC methodology in current role\n- Trained team on value-based selling\n- Developed custom qualification framework",
+        "scope": "enthusiastic about sharing sales process knowledge"
+      }
+    },
+    {
+      "Name": "Career Goals",
+      "Attributes": {
+        "category": "motivation",
+        "description": "Ambitious about advancing to senior sales leadership roles. Recognizes need to improve people management skills but primarily focused on revenue growth and market expansion.",
+        "confidence": "very clear about goals",
+        "examples": "- Pursuing executive sales leadership certification\n- Mentoring junior sales reps (though struggling)\n- Taking online courses in sales strategy",
+        "scope": "open to discussing career aspirations"
+      }
+    },
+    {
+      "Name": "Extensive Image Creation (Borrowing)",
+      "Attributes": {
+        "category": "behavior pattern",
+        "description": "- to invent an image of a good candidate for the job\n -to build stories by combining or arranging work experiences to provide better answers",
+        "examples": "I told fictional stories prepared in advance of the interview to best present my credentials. \n I fabricated examples to show my fit with the organization.  \n I made up stories about my work experiences that were well developed and logical.  \n I constructed fictional stories to explain the gaps in my work experiences.  \n I told stories that contained both real and fictional work experiences.  \n I combined, modified and distorted my work experiences in my answers. ",
+        "frequency": "all the time!",
+        "strength": "To a very great extent!!",
+        "scope": ""
+      }  
+    }
+  ]
+}

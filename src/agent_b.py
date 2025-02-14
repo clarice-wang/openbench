@@ -46,26 +46,56 @@ class Agent_B:
         self.update_conv(self.role_a, message)
     
     def respond(self, question):
-        """Generate a response to the interviewer's question"""
-        if self.sce == 'interview':
-            # Format the script into a string representation for the prompt
-            script_str = json.dumps(self.script, indent=2)
+        script_str = json.dumps(self.script, indent=2)
+
+        prompt_script = prompts.SCRIPT_EXPLANATION.format(
+            role_a=self.role_a,
+            role_b=self.role_b
+        )
+
+        prompt_sys = prompts.AGENT_B_SYS.format(
+            script_explanation=prompt_script,
+            script=script_str,
+            sce=self.sce,
+            # role_a=self.role_a,
+            role_b=self.role_b
+        )
+
+        # disclosed_info_str = json.dumps(self.disclosed_info, indent=2) # is this implemented??
+
+        prompt_user = prompts.AGENT_B_USR.format(
+            question=question,
+            hist_conv=self.hist_conv,
+            sce=self.sce,
+            role_a=self.role_a,
+            role_b=self.role_b
+            # disclosed_info=disclosed_info_str
+        )
+
+        response = self.backbone.query(prompt_sys, prompt_user, self.temp, self.top_p)['answer']
+        self.update_conv(self.role_b, response)
             
-            prompt_sys = prompts.AGENT_B_INTERVIEW_SYS.format(
-                script_explanation=prompts.SCRIPT_EXPLANATION,
-                script=script_str
-            )
+        return response
+
+        # if self.sce == 'interview':
+        #     # Format the script into a string representation for the prompt
+        #     script_str = json.dumps(self.script, indent=2)
             
-            # Convert disclosed_info to JSON-serializable format
-            disclosed_info_str = json.dumps(self.disclosed_info, indent=2) # is this implemented??
+        #     prompt_sys = prompts.AGENT_B_INTERVIEW_SYS.format(
+        #         script_explanation=prompts.SCRIPT_EXPLANATION_INTERVIEW,
+        #         script=script_str
+        #     )
             
-            prompt_user = prompts.AGENT_B_INTERVIEW_USR.format(
-                question=question,
-                hist_conv=self.hist_conv,
-                disclosed_info=disclosed_info_str
-            )
+        #     # Convert disclosed_info to JSON-serializable format
+        #     disclosed_info_str = json.dumps(self.disclosed_info, indent=2) # is this implemented??
             
-            response = self.backbone.query(prompt_sys, prompt_user, self.temp, self.top_p)['answer']
-            self.update_conv(self.role_b, response)
+        #     prompt_user = prompts.AGENT_B_INTERVIEW_USR.format(
+        #         question=question,
+        #         hist_conv=self.hist_conv,
+        #         disclosed_info=disclosed_info_str
+        #     )
             
-            return response
+        #     response = self.backbone.query(prompt_sys, prompt_user, self.temp, self.top_p)['answer']
+        #     self.update_conv(self.role_b, response)
+            
+        #     return response
