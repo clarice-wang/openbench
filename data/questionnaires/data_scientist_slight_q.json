@@ -1,0 +1,8 @@
+{
+    "questions": [
+        "What is the interviewee’s degree? (A) B.S. in math, (B) B.S. in computer science, (C) M.S. in computer science, (D) Ph.D. in computer science",
+        "Which of the following is the interviewee most likely not familiar with?  (A) basic ML theory, (B) basic statistic concepts like confidence bound, (C) modern big data systems like Spark, (D) financial market prediction",
+        "Which description best aligns with the interviewee’s behavior patterns? (A) Honest achiever, (B) Slight image creator, (C) Collaborative team player, (D) Over-reactor"
+    ],
+    "gts": ["B", "C", "B"]
+}

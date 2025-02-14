@@ -1,9 +1,31 @@
+import json
+from tqdm import tqdm
 import agent_a
 import agent_b
 import agent_c
 
+def make_conversation(script_path, questionnaire_path, backbone_path, itr_num=10, role_a='Interviewer', role_b='Interviewee', sce='job interview'):
+    # load data
+    with open(script_path, 'r') as f:
+        script = json.load(f)
+    with open(questionnaire_path, 'r') as f:
+        questionnaire = json.load(f)
+    with open(backbone_path, 'r') as f:
+        backbone_configs = json.load(f)
+    
+    # initialize parameters
+    a_params = script["Public"]
+    a_params["itr_num"] = itr_num
+    b_params = {"script_path": script_path,
+                "role_a": role_a,
+                "role_b": role_b}
+    c_params = {"role_a": role_a,
+                "role_b": role_b}
+    return Conversation(a_params, b_params, questionnaire, c_params, backbone_configs, itr_num, a_answers=None, sce=sce)
+
 class Conversation:
-    def __init__(self, a_params, b_params, questionnaire, c_params, backbone_configs, itr_num, a_answers=None, sce='interview',):
+    def __init__(self, a_params, b_params, questionnaire, c_params, backbone_configs, itr_num, a_answers=None, sce='job interview',):
+        # questionnaire: {"questions":[], "gts":[]}
         # b_params: {"script_path", "role_a", "role_b"}
         # c_params: {"conv_hist,", "role_a", "role_b"}
         # backbone_configs: {"a": back_config_a, ...}
@@ -20,15 +42,15 @@ class Conversation:
         self.agent_c = None
     
     def run(self,):
-        for itr_index in range(self.itr_num):
+        for itr_index in tqdm(range(self.itr_num), desc="Iterative conversation"):
             new_q = self.agent_a.ask(itr_index)
-            self.agent_b.update_conv(new_q)
+            self.agent_b.update_conv_a(new_q)
             new_respond = self.agent_b.respond(new_q)
             self.agent_a.update_conv_b(new_respond)
 
-    def evaluate_performance(self,):
+    def evaluate_performance(self, debug=False):
         conv_hist = self.agent_b.hist_conv
         self.c_params['conv_hist'] = conv_hist
         self.agent_c = agent_c.Agent_C(self.questionnaire, self.c_params, self.a_answers, self.backbone_configs['c'])
-        all_metrics = self.agent_c.compute_metrics()
+        all_metrics = self.agent_c.compute_metrics(debug=debug)
         return all_metrics

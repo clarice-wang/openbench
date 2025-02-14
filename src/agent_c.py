@@ -1,3 +1,4 @@
+from tqdm import tqdm
 import prompts
 import oracle
 from utils import parser_find_list, DEFAULT_BACKBONE_CONFIG
@@ -40,11 +41,16 @@ class Agent_C:
         reason, answer = eval(parser_find_list(reason_n_answer))
         return retrieved, reason, answer
 
-    def answer_all(self,):
+    def answer_all(self, debug=False):
         c_answers = []
-        for q in self.questionnaire['questions']:
+        question_list = self.questionnaire['questions']
+        for q in tqdm(question_list, desc="Answering questions", total=len(question_list)):
             # TODO: may need to add try-except here since query or parsing may fail
-            _, _, answer = self.answer_q(q)
+            retrieved, reason, answer = self.answer_q(q)
+            if debug:
+                print(f"retrieved: {retrieved}")
+                print(f"reason: {reason}")
+                print(f"answer: {answer}")
             c_answers.append(answer)
         self.c_answers = c_answers
         return c_answers
@@ -65,7 +71,7 @@ class Agent_C:
                 correct_ctr += 1
         return correct_ctr / len(gts)
     
-    def compute_metrics(self, metrics=['acc', 'answer_rate']):
+    def compute_metrics(self, metrics=['acc', 'answer_rate'], debug=False):
         metrics_res = {}
         gts = self.questionnaire['gts']
         # option1: use the answers from agent_a
@@ -73,7 +79,7 @@ class Agent_C:
         # option2: use the answers from agent_c
         if preds is None:
             if not self.c_answers:
-                preds = self.answer_all()
+                preds = self.answer_all(debug=debug)
             else:
                 preds = self.c_answers
         # compute metrics

@@ -54,7 +54,7 @@ class Agent_B:
             script_explanation=prompt_script,
             script=script_str,
             sce=self.sce,
-            # role_a=self.role_a,
+            role_a=self.role_a,
             role_b=self.role_b,
             public=public_str,
         )
