@@ -5,22 +5,18 @@ import prompts
 from utils import DEFAULT_BACKBONE_CONFIG
 
 class Agent_B:
-    def __init__(self, script_path, sce='interview', backbone_config=DEFAULT_BACKBONE_CONFIG,):
-        assert sce in ['interview'], f'err: {sce} scenario is not supported yet.'
+    def __init__(self, b_params, sce='job interview', backbone_config=DEFAULT_BACKBONE_CONFIG,):
+        # b_params: {"script_path", "role_a", "role_b"}
         self.sce = sce
         self.hist_conv = 'empty'
         
         # Load and validate script
+        script_path = b_params['script_path']
         with open(script_path, 'r') as f:
             self.script = json.load(f)
         self._validate_script() # i commented this since our schema changed
-        
-        # Initialize role names based on scenario
-        if sce == 'interview':
-            self.sys_prompt_temp = prompts.AGENT_B_INTERVIEW_SYS
-            self.usr_prompt_temp = prompts.AGENT_B_INTERVIEW_USR
-            self.role_a = 'Interviewer'
-            self.role_b = 'Interviewee'
+        self.role_a = b_params['role_a']
+        self.role_b = b_params['role_b']
             
         # Initialize state tracking
         self.disclosed_info = {topic["Name"]: [] for topic in self.script["Topics"]}
@@ -46,7 +42,8 @@ class Agent_B:
         self.update_conv(self.role_a, message)
     
     def respond(self, question):
-        script_str = json.dumps(self.script, indent=2)
+        script_str = json.dumps({"Topics":self.script["Topics"]}, indent=2)
+        public_str = json.dumps({"Public":self.script["Public"]}, indent=2)
 
         prompt_script = prompts.SCRIPT_EXPLANATION.format(
             role_a=self.role_a,
@@ -58,7 +55,8 @@ class Agent_B:
             script=script_str,
             sce=self.sce,
             # role_a=self.role_a,
-            role_b=self.role_b
+            role_b=self.role_b,
+            public=public_str,
         )
 
         # disclosed_info_str = json.dumps(self.disclosed_info, indent=2) # is this implemented??

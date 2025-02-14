@@ -1,0 +1,23 @@
+{
+    "a":{
+        "model": "gpt-4o",
+        "api_key": null,
+        "end_point": null,
+        "temp": 1.0,
+        "top_p": 0.9
+    },
+    "b":{
+        "model": "gpt-4o",
+        "api_key": null,
+        "end_point": null,
+        "temp": 1.0,
+        "top_p": 0.9
+    },
+    "c":{
+        "model": "gpt-4o",
+        "api_key": null,
+        "end_point": null,
+        "temp": 1.0,
+        "top_p": 0.9
+    }
+}

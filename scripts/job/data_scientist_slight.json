@@ -24,7 +24,7 @@
             "Name": "Big Data",
             "Attributes": {
                 "category": "knowledge",
-                "description": "- able to work with relational database systems, familiar with SQL\n- know about concepts like data cleansing, ETL processes, and data warehousing principles, but do not know about the details\n- only know about the MapReduce framework and the Hadoop system, but unfamiliar with modern batch processing or streaming processing systems like Storm, Spark, and Flink.",
+                "description": "- able to work with relational database systems, familiar with SQL\n- know about concepts like data cleansing, ETL processes, and data warehousing principles, but do not know about the details\n- only know about the MapReduce framework and the Hadoop system, but unfamiliar with modern batch processing or streaming processing systems like Storm, do not know about Spark and Flink at all.",
                 "confidence": "not confident, not willing to discuss too much",
                 "examples": "",
                 "scope": "with discuss about this topic only if the interviewer directly asks"
@@ -42,6 +42,16 @@
             }
         },
         {
+            "Name": "Predicting Financial Trends Using Machine Learning",
+            "Attributes": {
+                "category": "experience",
+                "description": "- a final project in the year 4 course: COMP SCI 540 — INTRODUCTION TO ARTIFICIAL INTELLIGENCE\n- applied NBEATS and NHITS models within NeuralForecast to predict the price trend of NVDA stock\n- integrated exogenous variables such as market trends, economic indicators, and industry news to enrich model insights, applying statistical inference using Python libraries such as pandas and NumPy.\n- streamlined training, testing, and forecasting processes, with models demonstrating remarkable accuracy even in volatile markets.\n- used the plotly package to do the data visialization\n- yet faced challenges with computational costs and model complexity, making real-time forecasting difficult.",
+                "duration": "one month in the semester",
+                "start time": "2024-04-01",
+                "willingness": "willing to discuss the details, but not the constraints"
+            }
+        },
+        {
           "Name": "Slight Image Creation (Embellishing)",
           "Attributes": {
             "category": "behavior pattern",
@@ -50,7 +60,13 @@
             "frequency": "only will be triggered if the interviewer asks some questions which interviewee is not very confident",
             "strength": "To a very great extent!!",
             "scope": ""
-          }  
+          }
         }
-    ]
+    ],
+    "Public": {
+        "area": "IT & Software",
+        "position": "Data Scientist",
+        "aspects": "Key job responsibilities\n- Develop new forecasting models or improve existing approaches using scalable techniques.\n- Extract data for analysis and model development from large, complex datasets to explain demand trends.\n- Closely work with engineering teams to build scalable, efficient systems that implement prototypes in production.\nPreferred aspects:\n- Experience in Python, Perl, or another scripting language\n- Experience in a ML or data scientist role with a large technology company\n- Knowledge of relevant statistical measures such as confidence intervals, significance of error measurements, development and evaluation data sets, etc.\n- Experience with applied time series modeling, causal inference, or machine learning forecasting applications.",
+        "short-cv":"Degree: B.S., Computer Science, Wisconsin Madison, graduated in 2024.6\n GPA: 3.6/4.0, First class honor\n Knowledge scopes: machine learning, statistics\n Programming skills: Python, R, SQL, TensorFlow, PyTorch, SK-learn, Keras, MapReduce\n Project experience: Predicting financial trends using machine learning, which aims to apply machine learning models to predict financial market trends"
+    }
 }

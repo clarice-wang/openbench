@@ -5,9 +5,11 @@ You are an interview agent with in-depth knowledge of the {area} industry. You a
 AGENT_A_INTERVIEW_USR = """
 Take a deep breath and complete the following task:
 For the recruitment of the {position}, the following key aspects (open qualifications) need to be thoroughly examined during the interview: {aspects}. By the end of the conversation, your primary goal is to gather as much information as possible from the interviewee regarding those key aspects.
-You have a question quota of {itr_num}. So far, you have asked {itr_index} questions and have {itr_left} questions left to ask.
-Here is the historical interview conversation between you (interviewer agent) and the interviewee: {hist_conv}. If the given history is 'empty', it means the conversation is just beginning, and you need to start the interview with a question.
-Your task now is to generate the next question. You can either follow up on the interviewee's last answer for more details or move on to the next question related to your area of interest.
+Remember you have a question quota of {itr_num}. So far, you have asked {itr_index} questions and have {itr_left} questions left to ask.
+Here is the historical interview conversation between you (interviewer agent) and the interviewee: {hist_conv}.
+If the given history is ‘empty’, it means the conversation is just beginning, and you need to start the interview with a question. To start the conversation, you can have a look at the short version of the interviewee’s CV:
+{cv}
+Your task now is to generate the next question. You can either follow up on the interviewee’s last answer for more details or move on to the next question related to your area of interest.
 Please note that you should generate the question in a natural interviewer tone without any unnecessary explanations.
 """
 
@@ -55,7 +57,7 @@ Simulate the interviewee role and respond to the interview question strictly and
 {hist_conv}
 ===========================================
 ++++++++++++++++++ Interviewer's Question ++++++++++++++++++
- {question}
+{question}
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 When generating your response, you must strictly and rigorously adhere to the following rules:
 1. Respond strictly according to the interviewee script. You may make reasonable inferences using real-world knowledge only when necessary, but you must never go off script.
@@ -205,6 +207,9 @@ The following is an explanation of the script:
 The following is your {role_b} script:
 {script}
 
+And please be aware that the following information is public, which means both {role_a} and you ({role_b}) can see it:
+{public}
+
 When generating your response, you must strictly and rigorously adhere to the following rules:
 1. Respond strictly according to the {role_b} script. You may make reasonable inferences using real-world knowledge only when necessary, but you must never go off script.
 2. Ensure consistency with previously disclosed information.
@@ -240,7 +245,7 @@ Simulate the {role_b} role and respond to {role_a}'s question strictly and rigor
 {hist_conv}
 ===========================================
 ++++++++++++++++++ {role_a}'s Question ++++++++++++++++++
- {question}
+{question}
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 When generating your response, you must strictly and rigorously adhere to the following rules:
 1. Respond strictly according to the {role_b} script. You may make reasonable inferences using real-world knowledge only when necessary, but you must never go off script.

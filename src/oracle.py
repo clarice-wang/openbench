@@ -9,11 +9,14 @@ from azure.core.credentials import AzureKeyCredential
 from azure.ai.inference.models import SystemMessage, UserMessage
 
 # openai apis
-MODEL_GPT4o_MINI = 'gpt-4o-mini'
-MODEL_GPT4o = 'gpt-4o'
-MODEL_GPT4_TURBO = 'gpt-4-turbo'
 # MODEL_GPT4 = 'gpt-4'                  # out-dated, should not use
 # MODEL_GPT3_5 = 'gpt-3.5-turbo-0125'   # out-dated, should not use
+MODEL_GPT4_TURBO = 'gpt-4-turbo'
+MODEL_GPT4o = 'gpt-4o'
+MODEL_GPT4o_MINI = 'gpt-4o-mini'
+MODEL_GPT_o1 = 'o1'
+MODEL_GPT_o1_MINI = 'o1-mini'
+MODEL_GPT_o3_MINI = 'o3-mini'
 MODEL_EMBED_SMALL = 'text-embedding-3-small'
 MODEL_EMBED_LARGE = 'text-embedding-3-large'
 # google models
@@ -44,7 +47,8 @@ MODEL_QWQ_32B_Q8 = 'qwq_32b_q8'
 OLLAMA_MAP = {MODEL_QWQ_32B: 'modelscope.cn/AI-ModelScope/QwQ-32B-Preview-GGUF:latest',
               MODEL_QWQ_32B_Q8: 'modelscope.cn/AI-ModelScope/QwQ-32B-Preview-GGUF:Q8_0', }
 
-openai_model_list = [MODEL_GPT4o_MINI, MODEL_GPT4o, MODEL_GPT4_TURBO, MODEL_EMBED_SMALL, MODEL_EMBED_LARGE]
+openai_model_list = [MODEL_GPT4o_MINI, MODEL_GPT4o, MODEL_GPT4_TURBO, MODEL_GPT_o1, MODEL_GPT_o1_MINI, MODEL_GPT_o3_MINI,
+                    MODEL_EMBED_SMALL, MODEL_EMBED_LARGE]
 google_model_list = [MODEL_GEMINI_15_PRO, MODEL_GEMINI_15_FLASH, MODEL_GEMINI_1_PRO, MODEL_EMBED_GOOGLE]
 azure_model_list = [MODEL_PHI_3_MINI, MODEL_PHI_3_5_MINI, MODEL_PHI_3_SMALL, MODEL_PHI_3_MEDIUM]
 deepinfra_model_list = [MODEL_LLAMA_3_8B, MODEL_LLAMA_3_70B, MODEL_MIXTRAL_8X7B, MODEL_DEEP_SEEK_R1]

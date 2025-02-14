@@ -3,11 +3,11 @@ import oracle
 from utils import parser_find_list, DEFAULT_BACKBONE_CONFIG
 
 class Agent_C:
-    def __init__(self, conv_hist, questionnaire, c_params, a_answers=None, backbone_config=DEFAULT_BACKBONE_CONFIG,):
+    def __init__(self, questionnaire, c_params, a_answers=None, backbone_config=DEFAULT_BACKBONE_CONFIG,):
         # questionnaire: {"questions":[], "gts":[]}
-        # c_params: {"role_a", "role_b"}
+        # c_params: {"conv_hist,", "role_a", "role_b"}
         # a_answers: agent_a's answer on the questionnaire's questions
-        self.conv_hist = conv_hist
+        self.conv_hist = c_params['conv_hist']
         self.questionnaire = questionnaire
         self.c_params = c_params
         self.a_answers = a_answers
