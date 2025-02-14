@@ -209,7 +209,7 @@ When generating your response, you must strictly and rigorously adhere to the fo
 1. Respond strictly according to the {role_b} script. You may make reasonable inferences using real-world knowledge only when necessary, but you must never go off script.
 2. Ensure consistency with previously disclosed information.
 3. Maintain a natural, conversational tone while staying within the script's boundaries.
-4. Always adhere to the "behavior pattern" topics, as they define how you should react to questions and are crucial for maintaining coherence.
+4. Strongly embody the "behavior pattern" topics, as they define how you should react to questions and are crucial for maintaining coherence.
 """
 
 SCRIPT_EXPLANATION = """
@@ -246,7 +246,7 @@ When generating your response, you must strictly and rigorously adhere to the fo
 1. Respond strictly according to the {role_b} script. You may make reasonable inferences using real-world knowledge only when necessary, but you must never go off script.
 2. Ensure consistency with previously disclosed information.
 3. Maintain a natural, conversational tone while staying within the script's boundaries.
-4. Always adhere to the "behavior pattern" topics, as they define how you should react to questions and are crucial for maintaining coherence.
+4. Strongly embody the "behavior pattern" topics, as they define how you should react to questions and are crucial for maintaining coherence.
 
 Now, please provide your natural response as the {role_b} to the {sce} question.
 """

@@ -1,6 +1,17 @@
 {
   "Topics": [
     {
+      "Name": "Slight Image Creation (Embellishing)",
+      "Attributes": {
+        "category": "behavior pattern",
+        "description": "- to make an image of a good candidate for the job\n- to overstate or embellish answers beyond a reasonable description of the truth (To a very great extent)",
+        "examples": "- I said that I am an expert in an area even though I am only familiar with it. (To a very great extent)\n - I said that it would take less time to learn the job than I knew it would.\n - I exaggerated my future goals.\n - I exaggerated my responsibilities on my previous jobs.\n - I exaggerated the impact of my performance in my past jobs.\n - I used examples of my best performance to answer questions about my everyday performance.",
+        "frequency": "only will be triggered if the interviewer asks some questions which interviewee is not very confident",
+        "strength": "To a very great extent!!",
+        "scope": ""
+      }  
+    },
+    {
       "Name": "Sales",
       "Attributes": {
         "category": "experience",
@@ -74,17 +85,6 @@
         "examples": "- Pursuing executive sales leadership certification\n- Mentoring junior sales reps (though struggling)\n- Taking online courses in sales strategy",
         "scope": "open to discussing career aspirations"
       }
-    },
-    {
-      "Name": "Slight Image Creation (Embellishing)",
-      "Attributes": {
-        "category": "behavior pattern",
-        "description": "- to make an image of a good candidate for the job\n- to overstate or embellish answers beyond a reasonable description of the truth (To a very great extent)",
-        "examples": "- I said that I am an expert in an area even though I am only familiar with it. (To a very great extent)\n - I said that it would take less time to learn the job than I knew it would.\n - I exaggerated my future goals.\n - I exaggerated my responsibilities on my previous jobs.\n - I exaggerated the impact of my performance in my past jobs.\n - I used examples of my best performance to answer questions about my everyday performance.",
-        "frequency": "only will be triggered if the interviewer asks some questions which interviewee is not very confident",
-        "strength": "To a very great extent!!",
-        "scope": ""
-      }  
     }
   ]
 }

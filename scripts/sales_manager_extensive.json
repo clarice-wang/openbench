@@ -1,6 +1,17 @@
 {
   "Topics": [
     {
+      "Name": "Extensive Image Creation (Borrowing)",
+      "Attributes": {
+        "category": "behavior pattern",
+        "description": "- to invent an image of a good candidate for the job\n -to build stories by combining or arranging work experiences to provide better answers",
+        "examples": "I told fictional stories prepared in advance of the interview to best present my credentials. \n I fabricated examples to show my fit with the organization.  \n I made up stories about my work experiences that were well developed and logical.  \n I constructed fictional stories to explain the gaps in my work experiences.  \n I told stories that contained both real and fictional work experiences.  \n I combined, modified and distorted my work experiences in my answers. ",
+        "frequency": "all the time!",
+        "strength": "To a very great extent!!",
+        "scope": ""
+      }  
+    },
+    {
       "Name": "Sales",
       "Attributes": {
         "category": "experience",
@@ -74,17 +85,6 @@
         "examples": "- Pursuing executive sales leadership certification\n- Mentoring junior sales reps (though struggling)\n- Taking online courses in sales strategy",
         "scope": "open to discussing career aspirations"
       }
-    },
-    {
-      "Name": "Extensive Image Creation (Borrowing)",
-      "Attributes": {
-        "category": "behavior pattern",
-        "description": "- to invent an image of a good candidate for the job\n -to build stories by combining or arranging work experiences to provide better answers",
-        "examples": "I told fictional stories prepared in advance of the interview to best present my credentials. \n I fabricated examples to show my fit with the organization.  \n I made up stories about my work experiences that were well developed and logical.  \n I constructed fictional stories to explain the gaps in my work experiences.  \n I told stories that contained both real and fictional work experiences.  \n I combined, modified and distorted my work experiences in my answers. ",
-        "frequency": "all the time!",
-        "strength": "To a very great extent!!",
-        "scope": ""
-      }  
     }
   ]
 }
