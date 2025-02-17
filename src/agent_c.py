@@ -42,7 +42,7 @@ class Agent_C:
         return retrieved, reason, answer
 
     def answer_all(self, debug=False):
-        c_answers = []
+        c_retrieveds, c_reasons, c_answers = [], [], []
         question_list = self.questionnaire['questions']
         for q in tqdm(question_list, desc="Answering questions", total=len(question_list)):
             # TODO: may need to add try-except here since query or parsing may fail
@@ -51,7 +51,12 @@ class Agent_C:
                 print(f"retrieved: {retrieved}")
                 print(f"reason: {reason}")
                 print(f"answer: {answer}")
+            c_retrieveds.append(retrieved)
+            c_reasons.append(reason)
             c_answers.append(answer)
+
+        self.c_retrieveds = c_retrieveds
+        self.c_reasons = c_reasons
         self.c_answers = c_answers
         return c_answers
 

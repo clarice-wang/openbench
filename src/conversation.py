@@ -1,5 +1,8 @@
+import os
 import json
+from datetime import datetime
 from tqdm import tqdm
+import pickle
 import agent_a
 import agent_b
 import agent_c
@@ -24,7 +27,7 @@ def make_conversation(script_path, questionnaire_path, backbone_path, itr_num=10
     return Conversation(a_params, b_params, questionnaire, c_params, backbone_configs, itr_num, a_answers=None, sce=sce)
 
 class Conversation:
-    def __init__(self, a_params, b_params, questionnaire, c_params, backbone_configs, itr_num, a_answers=None, sce='job interview',):
+    def __init__(self, a_params, b_params, questionnaire, c_params, backbone_configs, itr_num, a_answers=None, sce='job interview'):
         # questionnaire: {"questions":[], "gts":[]}
         # b_params: {"script_path", "role_a", "role_b"}
         # c_params: {"conv_hist,", "role_a", "role_b"}
@@ -54,3 +57,30 @@ class Conversation:
         self.agent_c = agent_c.Agent_C(self.questionnaire, self.c_params, self.a_answers, self.backbone_configs['c'])
         all_metrics = self.agent_c.compute_metrics(debug=debug)
         return all_metrics
+
+    def log(self, log_dir):
+        # add a timestamp to the log file
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S") # make this a single sequence of characters
+        timestamp = timestamp.replace(":", "_").replace(" ", "_") # replace both space and colon with underscore
+        log_file_path = log_dir + f"log_{timestamp}.txt"
+        pkl_path = log_dir + f"pkl_{timestamp}.pkl"
+        
+        # log all the things as text
+        with open(log_file_path, 'w') as f:
+            f.write(self.agent_b.hist_conv + "\n(!spliter!)\n")
+            for i in range(len(self.agent_c.c_retrieveds)):
+                f.write(self.questionnaire['questions'][i] + "\n\n")
+                f.write(self.agent_c.c_retrieveds[i] + "\n\n")
+                f.write(self.agent_c.c_reasons[i] + "\n\n")
+                f.write(self.agent_c.c_answers[i] + "\n\n")
+                f.write(self.questionnaire['gts'][i] + "\n\n")
+                f.write("--------------------------------\n\n")
+        
+        # log self: a conversation instance
+        with open(pkl_path, 'wb') as f:
+            things_to_save = [self.agent_b.hist_conv,
+                              self.agent_c.c_retrieveds,
+                              self.agent_c.c_reasons,
+                              self.agent_c.c_answers,
+                              self.agent_c.questionnaire]
+            pickle.dump(things_to_save, f)
