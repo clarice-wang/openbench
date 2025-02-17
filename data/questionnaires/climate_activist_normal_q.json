@@ -1,0 +1,24 @@
+{
+    "questions": [
+        "What is the activist's primary belief about corporate responsibility in climate change? (A) Corporations should voluntarily adopt green practices, (B) Corporations must be held legally accountable for environmental impact, (C) Corporations should focus on profit over environment, (D) Corporations are already doing enough",
+        
+        "According to the interview, what is the activist's stance on climate justice? (A) It's a secondary concern to environmental issues, (B) It's fundamentally linked to environmental activism, (C) It's not related to climate change, (D) It's only relevant in developing countries",
+        
+        "How did the activist describe their approach to direct action? (A) Opposes all forms of protest, (B) Supports only legal demonstrations, (C) Believes in peaceful civil disobedience, (D) Advocates for aggressive confrontation",
+        
+        "When discussing corporate practices, how did the activist respond to greenwashing? (A) Accepted companies' environmental claims, (B) Strongly criticized deceptive environmental marketing, (C) Showed indifference to corporate claims, (D) Topic wasn't addressed",
+        
+        "How did the activist connect climate change to social issues? (A) Saw them as separate issues, (B) Emphasized impacts on marginalized communities, (C) Focused only on environmental impacts, (D) Dismissed social considerations",
+        
+        "What was the activist's position on current climate policies? (A) Fully satisfied with existing measures, (B) Showed nuanced understanding while advocating for stronger action, (C) Completely opposed to all current policies, (D) Had no clear position",
+        
+        "How did the activist describe the role of community engagement in climate action? (A) Unnecessary extra work, (B) Central to effective climate advocacy, (C) Purely for public relations, (D) Topic wasn't explored",
+        
+        "What level of certainty did the activist express about climate justice issues? (A) Uncertain and questioning, (B) Moderate confidence, (C) Absolute conviction, (D) No clear position taken",
+        
+        "How did the activist connect their scientific knowledge to their activism? (A) Kept them entirely separate, (B) Used scientific understanding to inform advocacy, (C) Rejected scientific approaches, (D) Didn't discuss the connection",
+        
+        "What was the activist's perspective on the relationship between environmental and indigenous issues? (A) Saw them as unrelated, (B) Emphasized indigenous perspectives in climate solutions, (C) Dismissed indigenous concerns, (D) Topic wasn't discussed"
+    ],
+    "gts": ["B", "B", "C", "B", "B", "B", "B", "C", "B", "B"]
+}

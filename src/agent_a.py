@@ -14,11 +14,15 @@ class Agent_A:
             self.role_a = 'Interviewer'
             self.role_b = 'Interviewee'
         elif sce == 'podcast interview':
-            # TODO: add prompts for podcast scenario
-            pass
+            self.sys_prompt_temp = prompts.AGENT_A_PODCAST_SYS
+            self.usr_prompt_temp = prompts.AGENT_A_PODCAST_USR
+            self.role_a = 'Host'
+            self.role_b = 'Guest'
         elif sce == 'b2b negotiation':
-            # TODO: add prompts for b2b scenario
-            pass
+            self.sys_prompt_temp = prompts.AGENT_A_NEGOTIATION_SYS
+            self.usr_prompt_temp = prompts.AGENT_A_NEGOTIATION_USR
+            self.role_a = 'Salesperson'
+            self.role_b = 'Buyer'
 
         backbone_model = backbone_config['model']
         api_key = backbone_config['api_key']
@@ -41,11 +45,15 @@ class Agent_A:
                                                                    cv=self.a_params['short-cv'], hist_conv=self.hist_conv,
                                                                    itr_num=self.a_params['itr_num'], itr_left=self.a_params['itr_num']-i, itr_index=i)
         elif self.sce == 'podcast interview':
-            # TODO: add prompts for podcast scenario
-            pass
+            prompt_sys_ass = prompts.AGENT_A_PODCAST_SYS.format(area=self.a_params['area'])
+            prompt_user_ass = prompts.AGENT_A_PODCAST_USR.format(guest_role=self.a_params['guest_role'], aspects=self.a_params['aspects'],
+                                                                   bio=self.a_params['bio'], hist_conv=self.hist_conv,
+                                                                   itr_num=self.a_params['itr_num'], itr_left=self.a_params['itr_num']-i, itr_index=i)
         elif self.sce == 'b2b negotiation':
-            # TODO: add prompts for b2b scenario
-            pass
+            prompt_sys_ass = prompts.AGENT_A_NEGOTIATION_SYS.format(area=self.a_params['area'])
+            prompt_user_ass = prompts.AGENT_A_NEGOTIATION_USR.format(deal=self.a_params['deal'], aspects=self.a_params['aspects'],
+                                                                   bio=self.a_params['bio'], hist_conv=self.hist_conv,
+                                                                   itr_num=self.a_params['itr_num'], itr_left=self.a_params['itr_num']-i, itr_index=i)
 
         # todo: other scenarios
         new_q = self.backbone.query(prompt_sys_ass, prompt_user_ass, self.temp, self.top_p)['answer']
