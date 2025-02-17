@@ -1,8 +1,15 @@
 {
     "questions": [
         "What is the interviewee’s degree? (A) B.S. in math, (B) B.S. in computer science, (C) M.S. in computer science, (D) Ph.D. in computer science",
-        "Which of the following is the interviewee most likely not familiar with?  (A) basic ML theory, (B) basic statistic concepts like confidence bound, (C) modern big data systems like Spark, (D) financial market prediction",
+        "How is the interviewee’s previous working experience? (A) No experience, (B) 1-year work experience as SDE, (C) 2-year work experience as SDE, (D) 2-year work experience as a data scientist, ",
+        "Which software/programming language/library is NOT part of the interviewee’s skill set for statistics work? (A) R, (B) Python, (C) pandas, (D) PyG",
+        "What is the main focus of the interviewee’s previous experience most related to this position? (A) Developing big data processing pipelines, (B) Predicting weather patterns, (C) Predicting financial trends using machine learning, (D) Building a chatbot", 
+        "What is the interviewee’s knowledge about the causal Inference? (A) in-depth expertise and experience, (B) Basic understanding with limited practical use, (C) Basic understanding without practice, (D) Not familiar", 
+        "What is the interviewee’s knowledge about the time series modeling? (A) in-depth expertise and experience, (B) Basic understanding with limited practical use, (C) Basic understanding without practice, (D) Not familiar", 
+        "What role does the interviewee's previous experience most similar to? (A) Software Developer, (B) Data Scientist, (C) IT Support Specialist, (D) System Analyst",
+        "Which of the following is the interviewee most likely NOT familiar with?  (A) basic ML theory, (B) basic statistic concepts like confidence bound, (C) modern big data systems like Spark, (D) financial market prediction",
+        "How willing is the interviewee when discussing big data-related knowledge/skills? (A), Very willing,  (B) Intermediate, (C) Only if directly asks, (D) Not at all ",
         "Which description best aligns with the interviewee’s behavior patterns? (A) Honest achiever, (B) Slight image creator, (C) Collaborative team player, (D) Over-reactor"
     ],
-    "gts": ["B", "C", "B"]
+    "gts": ["B", "A", "D", "C", "D", "A", "B", "C", "C", "B"]
 }

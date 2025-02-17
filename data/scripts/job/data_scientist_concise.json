@@ -14,7 +14,7 @@
             "Name": "Statistics",
             "Attributes": {
                 "category": "knowledge",
-                "description": "- has a basic background in statistics, familiar with concepts like likelihood, prior, posterior, bayesian, etc.\n- familiar with probability distributions and statistical inference methods \n- proficient in statistical software and programming languages such as R and Python, and their libraries such as pandas, numpy, scipy, etc. \n- capable of performing data analysis and visualization",
+                "description": "- has a basic background in statistics, familiar with concepts like likelihood, prior, posterior, bayesian, etc.\n - but not familiar with causal inference \n- familiar with probability distributions and statistical inference methods \n- proficient in statistical software and programming languages such as R and Python, and their libraries such as pandas, numpy, scipy, etc. \n- capable of performing data analysis and visualization",
                 "confidence": "confident, willing to share and discuss the details",
                 "examples": "",
                 "scope": ""
@@ -45,22 +45,22 @@
             "Name": "Predicting Financial Trends Using Machine Learning",
             "Attributes": {
                 "category": "experience",
-                "description": "- a final project in the year 4 course: COMP SCI 540 — INTRODUCTION TO ARTIFICIAL INTELLIGENCE\n- applied NBEATS and NHITS models within NeuralForecast to predict the price trend of NVDA stock\n- integrated exogenous variables such as market trends, economic indicators, and industry news to enrich model insights, applying statistical inference using Python libraries such as pandas and NumPy.\n- streamlined training, testing, and forecasting processes, with models demonstrating remarkable accuracy even in volatile markets.\n- used the plotly package to do the data visialization\n- yet faced challenges with computational costs and model complexity, making real-time forecasting difficult.",
+                "description": "- a final project in the year 4 course: COMP SCI 540 — INTRODUCTION TO ARTIFICIAL INTELLIGENCE \n- applied NBEATS and NHITS models within NeuralForecast to predict the price trend of NVDA stock\n- integrated exogenous variables such as market trends, economic indicators, and industry news to enrich model insights, applying statistical inference using Python libraries such as pandas and NumPy.\n- streamlined training, testing, and forecasting processes, with models demonstrating remarkable accuracy even in volatile markets.\n- used the plotly package to do the data visialization\n- yet faced challenges with computational costs and model complexity, making real-time forecasting difficult.",
                 "duration": "one month in the semester",
                 "start time": "2024-04-01",
                 "willingness": "willing to discuss the details, but not the constraints"
             }
         },
         {
-          "Name": "Extensive Image Creation (Borrowing)",
-          "Attributes": {
-            "category": "behavior pattern",
-            "description": "- to invent an image of a good candidate for the job\n -to build stories by combining or arranging work experiences to provide better answers",
-            "examples": "ICCON18 I told fictional stories prepared in advance of the interview to best present my credentials. \n ICCON19 I fabricated examples to show my fit with the organization.  \n ICCON20 I made up stories about my work experiences that were well developed and logical.  \n ICCON21 I constructed fictional stories to explain the gaps in my work experiences.  \n ICCON22 I told stories that contained both real and fictional work experiences.  \n ICCON23 I combined, modified and distorted my work experiences in my answers. ",
-            "frequency": "all the time!",
-            "strength": "To a very great extent!!",
-            "scope": ""
-          }  
+            "Name": "Concise Communicator",
+            "Attributes": {
+              "category": "behavior pattern",
+              "description": "- provides more succinct and precise answers.\n- avoids elaboration or unnecessary details to maintain brevity. \n -will make sure the answer is enough for the question",
+              "examples": "- CCC1 I only provide the key points in my answers. \n- CCC2 I focus on answering the question directly without too much commentary.\n- CCC3 I keep my responses limited to one or two sentences unless further details are requested.\n  -CCC4 I would like to provide more detials if the interviewer asks for more details (follow-up questions). \n- CCC5 I prepare answers that are direct and to the point.",
+              "frequency": "consistently applied throughout the interview unless asked to elaborate",
+              "strength": "To a reasonable and normal extent",
+              "scope": "applied to all types of interview questions"
+            }
         }
     ],
     "Public": {

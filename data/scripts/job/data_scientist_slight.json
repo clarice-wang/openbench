@@ -14,7 +14,7 @@
             "Name": "Statistics",
             "Attributes": {
                 "category": "knowledge",
-                "description": "- has a basic background in statistics, familiar with concepts like likelihood, prior, posterior, bayesian, etc.\n- familiar with probability distributions and statistical inference methods \n- proficient in statistical software and programming languages such as R and Python, and their libraries such as pandas, numpy, scipy, etc. \n- capable of performing data analysis and visualization",
+                "description": "- has a basic background in statistics, familiar with concepts like likelihood, prior, posterior, bayesian, etc.\n - but not familiar with causal inference \n- familiar with probability distributions and statistical inference methods \n- proficient in statistical software and programming languages such as R and Python, and their libraries such as pandas, numpy, scipy, etc. \n- capable of performing data analysis and visualization",
                 "confidence": "confident, willing to share and discuss the details",
                 "examples": "",
                 "scope": ""
@@ -61,7 +61,18 @@
             "strength": "To a very great extent!!",
             "scope": ""
           }
-        }
+        },
+        {
+            "Name": "Normal Communicator",
+            "Attributes": {
+              "category": "behavior pattern",
+              "description": "- provides answers in a balanced manner.\n- sometimes concise, but never too much, depending on confidence and context.",
+              "examples": "- NC1 I may provide more detailed responses when I feel confident about the topic. \n- NC2 I keep my answers short if the interviewer seems not that interested.\n- NC3 I adjust my speaking style based on the interviewer's attitude. - NC5 I sometimes use filler words if uncertain. \n- NC6 I strive to be clear and engaging",
+              "frequency": "varies throughout the interview based on content familiarity and interview dynamics",
+              "strength": "to a little extent",
+              "scope": "applied flexibly across the interview"
+            }
+          }
     ],
     "Public": {
         "area": "IT & Software",
