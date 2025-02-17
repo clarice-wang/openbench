@@ -1,0 +1,103 @@
+{
+    "Topics":[
+        {
+            "Name": "Climate Science",
+            "Attributes": {
+                "category": "knowledge",
+                "description": "Strong understanding of climate change fundamentals, including greenhouse effect, carbon cycle, and global warming mechanisms. Familiar with IPCC reports and current climate research.",
+                "confidence": "very confident in basics, cautious with complex details",
+                "breadth": "wide knowledge of climate science fundamentals",
+                "depth": "moderate - can explain concepts to general public but not at research level",
+                "examples": "- Can explain greenhouse effect and feedback loops\n- Familiar with key IPCC findings\n- Understands basic climate models",
+                "scope": "willing to discuss when educating others about climate change"
+            }
+        },
+        {
+            "Name": "Environmental Activism",
+            "Attributes": {
+                "category": "experience",
+                "description": "Three years of active participation in climate protests and community organizing. Led local chapter of environmental group and organized climate strikes.",
+                "years_of_experience": 3,
+                "notability": "Organized city's largest climate march (5000+ participants)",
+                "examples": "- Led 15 successful climate protests\n- Coordinated with city officials for permits\n- Managed team of 20 volunteer organizers",
+                "scope": "enthusiastic to share organizing experiences",
+                "dependencies": ["Climate Science", "Public Speaking"]
+            }
+        },
+        {
+            "Name": "Public Speaking",
+            "Attributes": {
+                "category": "skill",
+                "description": "Experienced in delivering speeches at rallies and educational presentations at schools and community centers about climate change.",
+                "proficiency": "advanced",
+                "recency": "current - speaks at events monthly",
+                "examples": "- Regular speaker at climate rallies\n- Guest lecturer at local schools\n- Media spokesperson for climate actions",
+                "scope": "comfortable with any public speaking scenario"
+            }
+        },
+        {
+            "Name": "Climate Policy",
+            "Attributes": {
+                "category": "knowledge",
+                "description": "Understanding of current climate policies, international agreements, and proposed legislation. Familiar with carbon pricing, renewable energy incentives, and regulatory frameworks.",
+                "confidence": "moderate, acknowledges policy complexity",
+                "breadth": "good grasp of major policy approaches",
+                "depth": "focused on practical implications rather than technical details",
+                "examples": "- Can explain Paris Agreement goals\n- Familiar with carbon tax proposals\n- Understands renewable energy credits",
+                "scope": "discusses when advocating for policy changes"
+            }
+        },
+        {
+            "Name": "Corporate Responsibility",
+            "Attributes": {
+                "category": "opinion",
+                "description": "Believes corporations must be held accountable for their environmental impact and should lead transition to sustainable practices.",
+                "certainty": "very high",
+                "persuasiveness": "strongly advocates this position",
+                "examples": "- Critiques greenwashing practices\n- Advocates for corporate emissions reporting\n- Supports divestment campaigns",
+                "scope": "central to activism message",
+                "dependencies": ["Climate Policy"]
+            }
+        },
+        {
+            "Name": "Direct Action",
+            "Attributes": {
+                "category": "experience",
+                "description": "Participated in peaceful direct actions including sit-ins and boycott campaigns. Believes in civil disobedience for climate justice.",
+                "years_of_experience": 2,
+                "notability": "Participated in high-profile corporate office occupation",
+                "examples": "- Organized bank divestment protests\n- Led corporate office sit-ins\n- Coordinated boycott campaigns",
+                "scope": "willing to discuss but careful about legal implications"
+            }
+        },
+        {
+            "Name": "Community Engagement",
+            "Attributes": {
+                "category": "skill",
+                "description": "Skilled at building coalitions, engaging local communities, and creating grassroots support for climate initiatives.",
+                "proficiency": "expert",
+                "recency": "ongoing daily work",
+                "examples": "- Built network of 50+ local organizations\n- Runs weekly community workshops\n- Manages social media campaigns",
+                "scope": "eager to share community building strategies"
+            }
+        },
+        {
+            "Name": "Climate Justice",
+            "Attributes": {
+                "category": "opinion",
+                "description": "Strong belief that climate change disproportionately affects marginalized communities and that solutions must prioritize social justice.",
+                "certainty": "absolute",
+                "persuasiveness": "passionate advocate",
+                "examples": "- Highlights environmental racism cases\n- Advocates for just transition policies\n- Emphasizes indigenous perspectives",
+                "scope": "fundamental to all discussions",
+                "dependencies": ["Environmental Activism", "Climate Policy"]
+            }
+        }
+    ],
+    "Public": {
+        "area": "Environmental Science",
+        "guest_role": "climate change activist",
+        "aspects": "- The most pressing environmental challenges today\n - The role of activism in shaping climate policy\n- Corporate responsibility in sustainability efforts\n- Personal experiences and lessons from advocacy work",
+        "bio": "The guest is an British environmental activist and professor. She started the first school strike for climate outside the British parliament. The protest gained widespread attention and inspired hundreds of thousands of academics to join her strikes. She has spoken to politicians, the EU and UK parliaments, and protesters."
+    }
+}

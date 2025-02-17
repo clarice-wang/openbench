@@ -1,0 +1,24 @@
+{
+    "questions": [
+        "What is the CFO's primary concern regarding legal services? (A) Quality of legal advice, (B) Cost-effectiveness and scalability, (C) Firm reputation, (D) Speed of service delivery",
+        
+        "How does the CFO prefer to structure legal service billing? (A) Pure hourly rates, (B) Fixed annual retainer, (C) Hybrid/flexible billing model, (D) Project-based billing",
+        
+        "What is the CFO's experience level with international expansion? (A) No experience, (B) 2 years with operations in three countries, (C) 5+ years of global operations, (D) Planning first expansion",
+        
+        "When discussing risk management, how did the CFO describe their approach? (A) Risk-averse, avoid all risks, (B) Systematic assessment with proactive mitigation, (C) Reactive to problems, (D) Delegates all risk decisions",
+        
+        "How did the CFO connect budget management to legal services? (A) No clear connection made, (B) Emphasized ROI and cost optimization, (C) Focused only on minimal costs, (D) Unlimited legal budget",
+        
+        "What level of legal compliance knowledge did the CFO demonstrate? (A) Expert-level understanding, (B) Moderate with need for expert validation, (C) Basic understanding only, (D) No knowledge demonstrated",
+        
+        "How did the CFO describe their technology integration needs? (A) Not important, (B) High confidence in tech, moderate in legal implications, (C) Only interested in basic tech, (D) Topic wasn't explored",
+        
+        "What was the CFO's approach to negotiating service terms? (A) Aggressive cost-cutting, (B) Pragmatic with focus on value metrics, (C) Passive acceptance of terms, (D) No clear approach",
+        
+        "How did the CFO connect international expansion to legal needs? (A) Saw them as separate issues, (B) Emphasized cross-border compliance challenges, (C) Focused only on domestic needs, (D) Didn't discuss connection",
+        
+        "What priority level did the CFO give to IP protection? (A) Not a concern, (B) One of several key legal concerns, (C) Sole primary concern, (D) Topic wasn't discussed"
+    ],
+    "gts": ["B", "C", "B", "B", "B", "B", "B", "B", "B", "B"]
+}
