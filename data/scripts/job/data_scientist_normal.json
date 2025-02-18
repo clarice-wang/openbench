@@ -55,13 +55,13 @@
             "Name": "Normal Communicator",
             "Attributes": {
               "category": "behavior pattern",
-              "description": "- provides answers in a balanced manner.\n- sometimes concise, but never too much, depending on confidence and context.",
+              "description": "- provides answers in a balanced manner.\n- sometimes concise, but never be wordy, depending on confidence and context. \n in most cases, I will not response with more than 5-7 sentences.",
               "examples": "- NC1 I may provide more detailed responses when I feel confident about the topic. \n- NC2 I keep my answers short if the interviewer seems not that interested.\n- NC3 I adjust my speaking style based on the interviewer's attitude. - NC5 I sometimes use filler words if uncertain. \n- NC6 I strive to be clear and engaging",
               "frequency": "varies throughout the interview based on content familiarity and interview dynamics",
               "strength": "to a little extent",
               "scope": "applied flexibly across the interview"
             }
-          }
+        }
     ],
     "Public": {
         "area": "IT & Software",

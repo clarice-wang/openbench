@@ -1,0 +1,15 @@
+{
+    "questions": [
+    "How is the interviewee’s previous working experience? (A) two years, (B) four years, (C) six years, (D) just graduated ", 
+    "What is the interviewee’s previous position? (A) project manager, (B) (technical) product manager, (C) development engineer, (D) data scientist", 
+    "How is the interviewee’s technical abilities? (A) familiar and has practical experience with most computer science aspects, (B) familiar with most aspects but limited practice, (C) familiar with algorithmic fields but not systems, (D) no related knowledge at all",
+    "Which group of people did the interviewee communicate most in her last position? (A) technical team, (B) business customers, (C) C2C users, (D) marketing department",
+    "How is the interviewee’s previous knowledge of the advertising ecosystem? (A) extensive knowledge, (B) familiar but limited practice, (C) only know about most basic concepts, (D) No related knowledge at all",
+    "Has the interviewee worked with major ad platforms or shopping platforms before? (A) Extensive experience, (B) familiar with other company’s ads platforms, (C) Limited to e-commerce platforms, (D) No relevant experience",
+    "How are the interviewee’s patterns in the problem-solving? (A) on hold the problem and do other tasks, (B) using intuition and making quick decisions, (C) leave the problem to the colleague for resolution, (D) analyzing the problem with data insights",
+    "How does the interviewee guide product decisions in her previous experience? (A) Incorporating customer feedback and analytical insights, (B) based on intuitions, (C) well-designed automatic algorithms, (D) focused on competitor analysis",
+    "How willing is the interviewee when discussing her previous working details? (A) Very willing to discuss all the details,  (B) willing to discuss the strategy but not proprietary details, (C) limited willingness but will discuss if asked, (D) not willing at all",
+    "Which description best aligns with the interviewee’s behavior patterns? (A) Honest achiever, (B) Slight image creator, (C) Collaborative team player, (D) Over-reactor"
+    ],
+    "gts": ["C", "B", "C", "A", "C", "C", "D", "A", "B", "A"]
+}

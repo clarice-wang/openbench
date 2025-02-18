@@ -26,6 +26,23 @@ def make_conversation(script_path, questionnaire_path, backbone_path, itr_num=10
                 "role_b": role_b}
     return Conversation(a_params, b_params, questionnaire, c_params, backbone_configs, itr_num, a_answers=None, sce=sce)
 
+def make_conversation_dynamic(script_path, questionnaire_path, backbone_configs, itr_num=10, role_a='Interviewer', role_b='Interviewee', sce='job interview'):
+    # load data
+    with open(script_path, 'r') as f:
+        script = json.load(f)
+    with open(questionnaire_path, 'r') as f:
+        questionnaire = json.load(f)
+    
+    # initialize parameters
+    a_params = script["Public"]
+    a_params["itr_num"] = itr_num
+    b_params = {"script_path": script_path,
+                "role_a": role_a,
+                "role_b": role_b}
+    c_params = {"role_a": role_a,
+                "role_b": role_b}
+    return Conversation(a_params, b_params, questionnaire, c_params, backbone_configs, itr_num, a_answers=None, sce=sce)
+
 class Conversation:
     def __init__(self, a_params, b_params, questionnaire, c_params, backbone_configs, itr_num, a_answers=None, sce='job interview'):
         # questionnaire: {"questions":[], "gts":[]}
@@ -78,9 +95,10 @@ class Conversation:
         
         # log self: a conversation instance
         with open(pkl_path, 'wb') as f:
-            things_to_save = [self.agent_b.hist_conv,
-                              self.agent_c.c_retrieveds,
-                              self.agent_c.c_reasons,
-                              self.agent_c.c_answers,
-                              self.agent_c.questionnaire]
+            things_to_save = {"hist_conv": self.agent_b.hist_conv,
+                              "retrieveds": self.agent_c.c_retrieveds,
+                              "reasons": self.agent_c.c_reasons,
+                              "answers": self.agent_c.c_answers,
+                              "questionnaire": self.questionnaire,
+                              "configs": self.backbone_configs}
             pickle.dump(things_to_save, f)

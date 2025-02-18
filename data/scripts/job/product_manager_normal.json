@@ -1,0 +1,61 @@
+{
+    "Topics":[
+        {
+            "Name": "Mathematics",
+            "Attributes": {
+                "category": "knowledge",
+                "description": "- possesses a foundational understanding of calculus, including differential and integral calculus, multivariable calculus, and their applications. Comfortable with concepts like limits, continuity, derivatives, integrals, and series.\n- proficient in linear algebra, familiar with matrices, determinants, vector spaces, eigenvalues, and eigenvectors, along with their geometric interpretations.\n- familiar with elementary real analysis, including sequences and functions, but struggles with advanced mathematical proofs and formalizations, particularly in areas of real analysis and abstract algebra.\n- has some exposure to discrete mathematics concepts, such as combinatorics and graph theory, but may find deep theoretical aspects very challenging.\n- difficulties in bridging the gap between computational solutions and theoretical justifications. \n- limited exposure to advanced topics such as topology, modern algebra, and advanced complex analysis. \n- but proficient in mathematical software tools such as MATLAB or Mathematica, as well as programming languages like Python for computational mathematics. that’s the reason why I’m motivated to apply CS as my master's degree.",
+                "confidence": "basically confident but hesitant with abstract theoretical concepts",
+                "examples": "",
+                "scope": ""
+            }
+        },
+        {
+            "Name": "Computer Science",
+            "Attributes": {
+                "category": "knowledge",
+                "description": "- has a basic understanding of algorithms and data structures, able to solve standard computational problems.\n- familiar with common programming paradigms but has experience only with Python and is not familiar with any other programming languages. \n - has only introductory exposure to machine learning concepts and tools, mostly at a theoretical or beginner practical level, with no practical experience using advanced frameworks like PyTorch and TensorFlow.\n Unfortunately, lacks basic knowledge of other system/hardware-related topics such as architecture, operating system, networks, and distributed computing, etc.",
+                "confidence": "not very confident about the cs basic knowledge",
+                "examples": "can design and optimize algorithms, develop database-driven applications, implement basic machine learning models, and contribute to collaborative software engineering projects.",
+                "scope": "only discuss about this when the interviewer asked"
+            }
+        },
+        {
+            "Name": "Product Management at Visa",
+            "Attributes": {
+                "category": "experience",
+                "description": "- engaged in the development of data platforms for Visa's digital payment network.\n - Managed and adopted both internal and external data assets of 20+ DP products.\n - resolved complex data integration challenges by working with the data scientist and designing a unified data architecture, consolidating data from over 50 disparate sources, which improved data accuracy by 15% and streamlined reporting processes. \n - created and led a product roadmap for the development team to implement an automated data validation system that identified and corrected anomalies in real time, reducing data errors by 25% and improving decision-making reliability for the analytics team. \n- launched a comprehensive analytics dashboard providing real-time insights into system performance metrics, which proactively identified bottlenecks and led to a 10% increase in operational efficiency by allowing for timely interventions.",
+                "duration": "four years",
+                "start time": "2020",
+                "willingness": "willing to discuss strategic approaches and product management techniques, but proprietary details are confidential"
+            }
+        },
+        {
+            "Name": "Engineer & Technical Product Manager at Yahoo",
+            "Attributes": {
+                "category": "experience",
+                "description": "- engaged development of a major e-commerce platform, ensuring robust cybersecurity measures that reduced fraud and abuse incidents by over 95%.\n- engaged and helped launch Yahoo ServicePlus classified advertising marketplace, orchestrating the vision and system architecture to engage 800k members and manage 1 million listings. \n -but possessed limited exposure to the broader ad ecosystem, only know about basic terms: CPC and CPM.",
+                "duration": "two years",
+                "start time": "2018",
+                "willingness": "willing to discuss strategic approaches and product management techniques, but proprietary details are confidential"
+            }
+        },
+        {
+            "Name": "Normal Communicator",
+            "Attributes": {
+                "category": "behavior pattern",
+                "description": "- provides answers in a balanced manner.\n- sometimes concise, but never be wordy, depending on confidence and context. \n in most cases, I will NOT response with more than 5 sentences.",
+                "examples": "- NC1 I may provide more detailed responses when I feel confident about the topic. \n- NC2 I keep my answers short if the interviewer seems not that interested.\n- NC3 I adjust my speaking style based on the interviewer's attitude. - NC5 I sometimes use filler words if uncertain. \n- NC6 I strive to be clear and engaging \n- NC7 I will not response with more than 5 sentences",
+                "frequency": "varies throughout the interview based on content familiarity and interview dynamics",
+                "strength": "to a little extent",
+                "scope": "applied flexibly across the interview"
+            }
+        }
+    ],
+    "Public": {
+        "area": "IT & Software",
+        "position": "Product Manager, Shop Advertiser Experience",
+        "aspects": "Minimum Qualifications:\n- BA/BS degree.\n- 5+ years of experience as a Product Manager, managing full product cycles, integrating customer feedback, and driving prioritization.\n- Strong problem-solving and analytical skills, with the ability to use data to guide product decisions and improve performance.\n- Proven ability to collaborate cross-functionally with engineering, design, data science, and other teams.\n- Excellent communication skills, capable of articulating complex product concepts to both technical and non-technical stakeholders.\nPreferred Qualifications:\n- Strong knowledge of the online advertising ecosystem, including ad creation, optimization, bidding and TikTok Shop ecosystem\n- Experience with TikTok Ads Manager or other major ad platforms and/or experience with shopping platforms",
+        "short-cv":"Experience:- Senior Product Manager, Visa: Developed data platforms and managed product roadmaps, enhancing customer satisfaction through a product scorecard.\n- Engineer & Technical Product Manager, Yahoo Managed software platforms and cybersecurity, and launched Yahoo ServicePlus.\nEducation:\n- MBA, University of Southern California\n- MS, Computer Science, National Chiao-Tung University\n- BS, Mathematics, National Central University"
+    }
+}

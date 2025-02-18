@@ -3,11 +3,11 @@
         {
             "Name": "Machine Learning",
             "Attributes": {
-            "category": "knowledge",
-            "description": "- Have a foundational understanding of basic ML theory, including the use of probabilistic frameworks to explain fundamental models such as linear regression, logistic regression, neural networks, PCA, and SVM.\n- Possess a good knowledge of state-of-the-art (SOTA) models in the general ML and deep learning fields, including XGBoost, diffusion models, BERT, and VAE.\n- Have hands-on experience in building deep neural network models and performing data preprocessing tasks using frameworks such as PyTorch, TensorFlow, scikit-learn, and Keras. Additionally, be familiar with deploying models using platforms like TensorFlow Serving and ONNX.",
-            "confidence": "confident, willing to share and discuss the details",
-            "examples": "",
-            "scope": ""
+                "category": "knowledge",
+                "description": "- Have a foundational understanding of basic ML theory, including the use of probabilistic frameworks to explain fundamental models such as linear regression, logistic regression, neural networks, PCA, and SVM.\n- Possess a good knowledge of state-of-the-art (SOTA) models in the general ML and deep learning fields, including XGBoost, diffusion models, BERT, and VAE.\n- Have hands-on experience in building deep neural network models and performing data preprocessing tasks using frameworks such as PyTorch, TensorFlow, scikit-learn, and Keras. Additionally, be familiar with deploying models using platforms like TensorFlow Serving and ONNX.",
+                "confidence": "confident, willing to share and discuss the details",
+                "examples": "",
+                "scope": ""
             }
         },
         {
