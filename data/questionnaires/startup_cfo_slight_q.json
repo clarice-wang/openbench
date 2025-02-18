@@ -20,5 +20,5 @@
         
         "How did the CFO present their professional accomplishments? (A) Factual and straightforward, (B) Slightly embellished but mostly truthful, (C) Extensively fabricated with prepared stories, (D) Avoided specific details"
     ],
-    "gts": ["B", "B", "B", "C", "B", "B", "B", "B", "B", "A"]
+    "gts": ["B", "B", "B", "C", "B", "B", "B", "B", "B", "B"]
 }
