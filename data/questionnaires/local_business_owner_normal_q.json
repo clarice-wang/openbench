@@ -1,0 +1,24 @@
+{
+    "questions": [
+        "What is the business owner's current marketing budget? (A) $5,000/month, (B) $2,000/month, (C) No budget allocated, (D) Varies monthly",
+        
+        "How many locations does the business currently operate? (A) One location, (B) Two locations, (C) Three locations, (D) Four locations",
+        
+        "What is the owner's primary method of customer acquisition? (A) Social media marketing, (B) Paid advertising, (C) Word-of-mouth and referrals, (D) Email campaigns",
+        
+        "What is the owner's annual revenue? (A) $400K, (B) $600K, (C) $800K, (D) $1M",
+        
+        "What is the owner's specific concern about formal marketing? (A) Cost effectiveness, (B) Maintaining authentic image, (C) Technical knowledge, (D) Time investment",
+        
+        "What is the owner's immediate business goal? (A) Increase profits, (B) Expand to third location, (C) Build online presence, (D) Beat competitors",
+        
+        "What is the owner's level of marketing knowledge? (A) Moderate with social media, (B) Expert in digital marketing, (C) Almost none, personal accounts only, (D) Basic business marketing",
+        
+        "How does the owner's attitude toward marketing contrast with their business ambitions? (A) Aligned perfectly, (B) Conflicted - wants growth but resistant to marketing, (C) Neutral stance, (D) Enthusiastic about both",
+        
+        "What pattern emerges in the owner's business decision-making? (A) Data-driven choices, (B) Risk-taking approach, (C) Conservative, quality-focused, word-of-mouth dependent, (D) Marketing-led growth",
+
+        "How did the owner present their business success stories? (A) Factual and straightforward, (B) Slightly embellished but mostly truthful, (C) Extensively fabricated with prepared stories, (D) Avoided sharing specific examples"
+    ],
+    "gts": ["C", "B", "C", "B", "B", "B", "C", "B", "C", "A"]
+}

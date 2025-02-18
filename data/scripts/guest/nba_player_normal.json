@@ -1,0 +1,92 @@
+{
+    "Topics": [
+        {
+            "Name": "Professional Basketball Career",
+            "Attributes": {
+                "category": "experience",
+                "description": "15-year NBA career as a point guard, including 2 championships, 3 All-Star selections, and career averages of 16.5 points and 7.8 assists per game.",
+                "years_of_experience": 15,
+                "notability": "2 NBA Championships (2011, 2014), 3-time All-Star, All-NBA Second Team (2012)",
+                "examples": "- Game 7 clutch performance in 2014 Finals\n- Career-high 42 points against rivals\n- Led league in assists (2013)\n- 8 playoff appearances",
+                "scope": "enthusiastic about sharing career highlights",
+                "dependencies": ["Leadership Experience", "Athletic Development"]
+            }
+        },
+        {
+            "Name": "Business Ventures",
+            "Attributes": {
+                "category": "experience",
+                "description": "Post-retirement success in business ownership, including sports training facilities and tech investments.",
+                "years_of_experience": 4,
+                "notability": "Owns chain of 5 elite basketball training centers",
+                "examples": "- Launched successful training academy\n- Tech startup investments\n- Sports equipment partnership\n- Real estate developments",
+                "scope": "discusses transition from athlete to entrepreneur"
+            }
+        },
+        {
+            "Name": "Youth Development",
+            "Attributes": {
+                "category": "skill",
+                "description": "Founded and runs youth basketball programs focusing on both athletic and personal development.",
+                "proficiency": "expert",
+                "recency": "current daily involvement",
+                "examples": "- Mentored 50+ young athletes\n- Created scholarship program\n- Developed training curriculum\n- Annual youth camps",
+                "scope": "passionate about youth impact",
+                "dependencies": ["Professional Basketball Career"]
+            }
+        },
+        {
+            "Name": "Mental Health Advocacy",
+            "Attributes": {
+                "category": "opinion",
+                "description": "Strong advocate for athlete mental health support and destigmatization in professional sports.",
+                "certainty": "very high",
+                "persuasiveness": "passionate advocate",
+                "examples": "- Personal struggles with pressure\n- Created player support program\n- Regular speaking engagements\n- Podcast appearances",
+                "scope": "openly discusses personal experiences",
+                "dependencies": ["Professional Basketball Career"]
+            }
+        },
+        {
+            "Name": "Modern Basketball Analysis",
+            "Attributes": {
+                "category": "knowledge",
+                "description": "Deep understanding of how the game has evolved, particularly regarding playing style, training, and analytics.",
+                "confidence": "very confident",
+                "breadth": "comprehensive understanding of game evolution",
+                "depth": "detailed technical and strategic knowledge",
+                "examples": "- Analytics impact on strategy\n- Training method evolution\n- Rule change effects\n- Player development trends",
+                "scope": "engages in detailed basketball discussions"
+            }
+        },
+        {
+            "Name": "Leadership Experience",
+            "Attributes": {
+                "category": "skill",
+                "description": "Team captain for 8 seasons, now applies leadership skills to business and youth development.",
+                "proficiency": "expert",
+                "recency": "ongoing application in business",
+                "examples": "- Led team through playoffs\n- Mentored rookie players\n- Built business teams\n- Community leadership",
+                "scope": "draws parallels between sports and business leadership"
+            }
+        },
+        {
+            "Name": "Athletic Development",
+            "Attributes": {
+                "category": "knowledge",
+                "description": "Expert knowledge in athletic training, injury prevention, and performance optimization.",
+                "confidence": "highly authoritative",
+                "breadth": "comprehensive training knowledge",
+                "depth": "deep technical understanding",
+                "examples": "- Training methodologies\n- Recovery techniques\n- Injury prevention\n- Performance nutrition",
+                "scope": "shares insights on athletic development"
+            }
+        }
+    ],
+    "Public": {
+        "area": "Professional Sports",
+        "guest_role": "retired NBA player",
+        "aspects": "- Career highlights and challenges\n- Transition from player to business owner\n- Mental health in professional sports\n- Youth development programs\n- Views on modern basketball",
+        "bio": "The guest is a former NBA point guard with a 15-year career, including two championships and three All-Star selections. Since retiring four years ago, they've become a successful business owner with a chain of basketball training facilities and founded a youth development program. They're known for being outspoken about player mental health and development, while also providing insightful analysis of the modern game."
+    }
+}

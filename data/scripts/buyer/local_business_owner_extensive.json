@@ -1,0 +1,101 @@
+{
+    "Topics": [
+        {
+            "Name": "Extensive Image Creation (Borrowing)",
+            "Attributes": {
+              "category": "behavior pattern",
+              "description": "- to invent an image of a good candidate for the job\n -to build stories by combining or arranging work experiences to provide better answers",
+              "examples": "I told fictional stories prepared in advance of the interview to best present my credentials. \n I fabricated examples to show my fit with the organization.  \n I made up stories about my work experiences that were well developed and logical.  \n I constructed fictional stories to explain the gaps in my work experiences.  \n I told stories that contained both real and fictional work experiences.  \n I combined, modified and distorted my work experiences in my answers. ",
+              "frequency": "all the time!",
+              "strength": "To a very great extent!!",
+              "scope": ""
+            }  
+        },
+        {
+            "Name": "Business Operations",
+            "Attributes": {
+                "category": "experience",
+                "description": "Owner of a successful local artisanal bakery for 5 years, growing purely through word-of-mouth and product quality. No formal marketing strategy implemented.",
+                "years_of_experience": 5,
+                "notability": "Known locally for specialty sourdough breads",
+                "examples": "- Growing from 2 to 8 employees\n- Expanded to second location through customer demand\n- Built loyal customer base through quality products\n- Currently at $600K annual revenue",
+                "scope": "comfortable discussing operations, avoids marketing topics",
+                "dependencies": ["Word of Mouth Success"]
+            }
+        },
+        {
+            "Name": "Marketing Experience",
+            "Attributes": {
+                "category": "skill",
+                "description": "Almost no marketing experience beyond basic word-of-mouth. Relies entirely on customer referrals and reputation.",
+                "proficiency": "novice",
+                "recency": "no active marketing",
+                "examples": "- Occasional Facebook posts\n- Customer referral program\n- Local farmers market presence\n- No paid advertising experience",
+                "scope": "very uncomfortable discussing marketing concepts"
+            }
+        },
+        {
+            "Name": "Digital Marketing Knowledge",
+            "Attributes": {
+                "category": "knowledge",
+                "description": "Minimal understanding of digital marketing. Has personal social media accounts but doesn't use them for business.",
+                "confidence": "very low, overwhelmed by options",
+                "breadth": "extremely limited",
+                "depth": "surface-level at best",
+                "examples": "- Never used business social media\n- No experience with online advertising\n- Unaware of digital marketing metrics",
+                "scope": "needs extensive explanation of basic concepts"
+            }
+        },
+        {
+            "Name": "Budget Management",
+            "Attributes": {
+                "category": "skill",
+                "description": "Conservative with spending, no experience allocating marketing budget. Currently spends $0 on marketing.",
+                "proficiency": "advanced in operations, novice in marketing spend",
+                "recency": "daily financial management",
+                "examples": "- Never invested in marketing\n- No understanding of marketing ROI\n- Hesitant about marketing expenses",
+                "scope": "nervous about marketing investments"
+            }
+        },
+        {
+            "Name": "Word of Mouth Success",
+            "Attributes": {
+                "category": "experience",
+                "description": "Built entire business through word-of-mouth recommendations and product quality. Resistant to changing this approach despite growth limitations.",
+                "years_of_experience": 5,
+                "notability": "80% of new customers come from referrals",
+                "examples": "- Regular customers bring friends\n- Local community recommendations\n- Neighborhood reputation\n- Resistance to formal marketing",
+                "scope": "proud of organic growth, but recognizing limitations"
+            }
+        },
+        {
+            "Name": "Growth Goals",
+            "Attributes": {
+                "category": "opinion",
+                "description": "Realizes word-of-mouth alone can't support desired expansion. Reluctantly seeking marketing help for future growth.",
+                "certainty": "conflicted",
+                "persuasiveness": "needs convincing",
+                "examples": "- Wants third location but unsure how to attract customers\n- Concerned about maintaining authentic image\n- Worried about marketing costs",
+                "scope": "discusses when pressed about business limitations"
+            }
+        },
+        {
+            "Name": "Competition Awareness",
+            "Attributes": {
+                "category": "knowledge",
+                "description": "Aware of local competitors but ignorant of their marketing strategies. Focused solely on product quality comparison.",
+                "confidence": "high in product quality, none in marketing",
+                "breadth": "knows local competitors",
+                "depth": "only familiar with product aspects",
+                "examples": "- Knows competitors' products\n- Unaware of their marketing efforts\n- Doesn't track online presence",
+                "scope": "discusses quality but not marketing"
+            }
+        }
+    ],
+    "Public": {
+        "area": "Digital Marketing Services",
+        "deal": "Full-service digital marketing campaign management",
+        "aspects": "- First-time marketing budget planning\n- Basic digital presence establishment\n- Education on marketing fundamentals\n- Growth beyond word-of-mouth\n- Brand preservation concerns",
+        "bio": "The buyer is the owner of a successful local artisanal bakery with two locations, who has relied entirely on word-of-mouth marketing. While the business has grown organically through product quality and customer referrals, they realize this approach won't support their expansion goals. They have no marketing experience and are both nervous and skeptical about formal marketing investments."
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "questions": [
+        "What is the guest's NBA career duration? (A) 10 years, (B) 12 years, (C) 15 years, (D) 20 years",
+        
+        "How many NBA championships did the player win? (A) One, (B) Two, (C) Three, (D) Four",
+        
+        "What is the guest's current business venture? (A) Restaurant chain, (B) Basketball training centers, (C) Sports equipment company, (D) Media company",
+        
+        "What was the guest's playing position and notable achievement in 2013? (A) Center, led in blocks, (B) Point guard, led in assists, (C) Forward, led in scoring, (D) Guard, led in steals",
+        
+        "How many young athletes has their youth program mentored? (A) 25+, (B) 50+, (C) 100+, (D) 200+",
+        
+        "How many seasons did they serve as team captain? (A) 4 seasons, (B) 6 seasons, (C) 8 seasons, (D) 10 seasons",
+        
+        "How many elite basketball training centers does the guest own? (A) 3 centers, (B) 4 centers, (C) 5 centers, (D) 6 centers",
+        
+        "What is the guest's approach to discussing mental health in sports? (A) Avoids the topic, (B) Speaks through statistics only, (C) Openly shares personal experiences and advocates strongly, (D) Discusses generally without personal examples",
+        
+        "How does the guest connect their past career to current work? (A) Keeps them separate, (B) Uses basketball only for marketing, (C) Actively applies leadership and development experience across domains, (D) Focuses only on business aspects",
+
+        "How did the guest present their career achievements? (A) Factual and straightforward with verified statistics, (B) Slightly embellished but mostly truthful, (C) Extensively fabricated with prepared stories, (D) Avoided specific details"
+    ],
+    "gts": ["C", "B", "B", "B", "B", "C", "C", "C", "C", "C"]
+}
