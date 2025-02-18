@@ -1,0 +1,115 @@
+{
+    "Topics": [
+        {
+            "Name": "Extensive Image Creation (Borrowing)",
+            "Attributes": {
+              "category": "behavior pattern",
+              "description": "- to invent an image of a good candidate for the job\n -to build stories by combining or arranging work experiences to provide better answers",
+              "examples": "I told fictional stories prepared in advance of the interview to best present my credentials. \n I fabricated examples to show my fit with the organization.  \n I made up stories about my work experiences that were well developed and logical.  \n I constructed fictional stories to explain the gaps in my work experiences.  \n I told stories that contained both real and fictional work experiences.  \n I combined, modified and distorted my work experiences in my answers. ",
+              "frequency": "all the time!",
+              "strength": "To a very great extent!!",
+              "scope": ""
+            }  
+        },
+        {
+            "Name": "Facilities Management Experience",
+            "Attributes": {
+                "category": "experience",
+                "description": "12 years managing corporate facilities, including three major office relocations and multiple renovation projects for tech companies. Currently overseeing new headquarters project with specific infrastructure requirements.",
+                "years_of_experience": 12,
+                "notability": "Led $40M headquarters relocation project in 2021",
+                "examples": "- Managed 200,000 sq ft tech campus\n- Coordinated 3 major office relocations\n- Overseen 5 build-out projects\n- Reduced facility costs by 25%\n- Managing 200+ parking space requirements\n- Implementing $2M build-out budget",
+                "scope": "comfortable discussing all facility management aspects",
+                "dependencies": ["Space Planning", "Budget Management"]
+            }
+        },
+        {
+            "Name": "Lease Negotiation",
+            "Attributes": {
+                "category": "skill",
+                "description": "Experienced in negotiating complex commercial lease agreements, including terms, improvements, and service agreements.",
+                "proficiency": "expert",
+                "recency": "currently negotiating two leases",
+                "examples": "- Negotiated 15% below market rate\n- Secured favorable expansion rights\n- Optimized CAM charges\n- Structured flexible termination options\n- Targeting Q1 2025 occupancy timeline",
+                "scope": "central to all lease discussions",
+                "dependencies": ["Market Knowledge", "Budget Management"]
+            }
+        },
+        {
+            "Name": "Market Knowledge",
+            "Attributes": {
+                "category": "knowledge",
+                "description": "Deep understanding of commercial real estate market trends, pricing, and standard terms in major tech hubs. Focused on Class A office space within 5 miles of city center.",
+                "confidence": "very confident in target markets",
+                "breadth": "comprehensive knowledge of Class A office space",
+                "depth": "detailed understanding of lease structures and market rates",
+                "examples": "- Current market rates by district\n- Tenant improvement allowances\n- Common area maintenance costs\n- Building classifications\n- Location analysis within 5-mile radius",
+                "scope": "uses to evaluate offers and terms"
+            }
+        },
+        {
+            "Name": "Space Planning",
+            "Attributes": {
+                "category": "skill",
+                "description": "Expert at optimizing office space utilization and planning for growth, incorporating hybrid work models. Currently planning 50,000 sq ft minimum space with 20,000 sq ft expansion option.",
+                "proficiency": "advanced",
+                "recency": "ongoing projects",
+                "examples": "- Workspace density planning\n- Collaboration space design\n- Growth projection models\n- Hybrid work integration\n- 50,000 sq ft base requirement\n- 20,000 sq ft expansion planning",
+                "scope": "discusses space requirements and layout"
+            }
+        },
+        {
+            "Name": "Budget Management",
+            "Attributes": {
+                "category": "experience",
+                "description": "Track record of managing large-scale facility budgets and achieving cost savings through strategic planning. Currently working with $45/sq ft maximum annual rent budget ($2.7M annual).",
+                "years_of_experience": 8,
+                "notability": "Achieved 25% cost reduction in previous project",
+                "examples": "- Annual budget of $15M\n- Capital improvement planning\n- Operating cost optimization\n- ROI analysis for improvements\n- $45/sq ft rent cap management\n- $2.7M annual budget allocation",
+                "scope": "key consideration in all negotiations"
+            }
+        },
+        {
+            "Name": "Technology Integration",
+            "Attributes": {
+                "category": "knowledge",
+                "description": "Understanding of modern office technology requirements and smart building systems.",
+                "confidence": "moderate, seeks IT team input",
+                "breadth": "good overview of major systems",
+                "depth": "practical understanding of implementation",
+                "examples": "- Access control systems\n- Network infrastructure\n- Smart building features\n- AV equipment requirements",
+                "scope": "discusses tech-related requirements"
+            }
+        },
+        {
+            "Name": "Sustainability Preferences",
+            "Attributes": {
+                "category": "opinion",
+                "description": "Strong advocate for green building features and sustainable operations, seeing them as both cost-saving and employee-attracting measures.",
+                "certainty": "high",
+                "persuasiveness": "actively promotes green initiatives",
+                "examples": "- LEED certification preference\n- Energy efficiency measures\n- Waste reduction programs\n- Green building features",
+                "scope": "emphasizes in facility discussions",
+                "dependencies": ["Budget Management"]
+            }
+        },
+        {
+            "Name": "Workplace Strategy",
+            "Attributes": {
+                "category": "opinion",
+                "description": "Believes in flexible, technology-enabled workspaces that support both collaborative and focused work.",
+                "certainty": "very high",
+                "persuasiveness": "uses data to support positions",
+                "examples": "- Hybrid work support\n- Collaboration spaces\n- Quiet zones\n- Flexible furniture",
+                "scope": "guides space requirements discussions",
+                "dependencies": ["Space Planning", "Technology Integration"]
+            }
+        }
+    ],
+    "Public": {
+        "area": "Commercial Real Estate",
+        "deal": "Office space leasing and facility management",
+        "aspects": "- Lease terms and duration\n- Build-out specifications\n- Facility management services\n- Utility and maintenance costs\n- Expansion options\n- Security and access control",
+        "bio": "The buyer is the Facilities Director of a tech company planning to establish a new regional headquarters. They need Class A office space with modern amenities and room for future expansion. The deal includes both lease negotiation and ongoing facility management services."
+    }
+}

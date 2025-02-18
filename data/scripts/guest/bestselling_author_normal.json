@@ -1,0 +1,103 @@
+{
+    "Topics": [
+        {
+            "Name": "Writing Process",
+            "Attributes": {
+                "category": "skill",
+                "description": "Developed a systematic approach to writing psychological thrillers, including character development, plot structuring, and maintaining suspense.",
+                "proficiency": "expert",
+                "recency": "daily writing practice",
+                "examples": "- 4-hour morning writing routine\n- Character development worksheets\n- Plot mapping techniques\n- Research integration methods",
+                "scope": "enthusiastic about sharing creative process",
+                "dependencies": ["Publishing Experience", "Genre Knowledge"]
+            }
+        },
+        {
+            "Name": "Publishing Experience",
+            "Attributes": {
+                "category": "experience",
+                "description": "Fifteen years in publishing, transitioning from traditional to hybrid model. Experience with major publishing houses and self-publishing platforms.",
+                "years_of_experience": 15,
+                "notability": "7 NYT bestsellers, 5 million books sold",
+                "examples": "- First book deal with Penguin Random House\n- Successful transition to hybrid publishing\n- International rights deals in 40 countries\n- Audiobook production experience",
+                "scope": "openly discusses publishing industry insights"
+            }
+        },
+        {
+            "Name": "Genre Knowledge",
+            "Attributes": {
+                "category": "knowledge",
+                "description": "Deep understanding of psychological thriller genre conventions, market trends, and reader expectations.",
+                "confidence": "very confident, authoritative voice",
+                "breadth": "comprehensive knowledge of thriller subgenres",
+                "depth": "expert-level understanding of genre mechanics",
+                "examples": "- Psychological suspense techniques\n- Character unreliability methods\n- Plot twist construction\n- Pacing strategies",
+                "scope": "eager to discuss genre craft"
+            }
+        },
+        {
+            "Name": "Digital Publishing",
+            "Attributes": {
+                "category": "opinion",
+                "description": "Strong advocate for embracing digital platforms while maintaining traditional publishing relationships.",
+                "certainty": "high",
+                "persuasiveness": "balanced advocate",
+                "examples": "- E-book pricing strategies\n- Platform diversification\n- Direct reader engagement\n- Marketing automation",
+                "scope": "discusses industry evolution",
+                "dependencies": ["Publishing Experience"]
+            }
+        },
+        {
+            "Name": "Author Platform",
+            "Attributes": {
+                "category": "skill",
+                "description": "Built and maintains strong social media presence and reader community across multiple platforms.",
+                "proficiency": "advanced",
+                "recency": "daily engagement",
+                "examples": "- 500K Instagram followers\n- Monthly newsletter (100K subscribers)\n- Virtual book clubs\n- Reader engagement events",
+                "scope": "shares platform building strategies"
+            }
+        },
+        {
+            "Name": "Creative Mentorship",
+            "Attributes": {
+                "category": "experience",
+                "description": "Conducts writing workshops and mentors emerging authors through online programs and conferences.",
+                "years_of_experience": 5,
+                "notability": "Founded successful online writing community",
+                "examples": "- Annual writing workshop series\n- Online mentorship program\n- Conference speaking\n- Craft book publication",
+                "scope": "passionate about supporting new writers"
+            }
+        },
+        {
+            "Name": "Industry Trends",
+            "Attributes": {
+                "category": "knowledge",
+                "description": "Keeps pulse on publishing industry changes, market trends, and emerging opportunities.",
+                "confidence": "moderate, acknowledges rapid changes",
+                "breadth": "wide awareness of industry developments",
+                "depth": "practical understanding of implications",
+                "examples": "- AI in publishing\n- Audiobook market growth\n- Social media marketing trends\n- Reader behavior changes",
+                "scope": "discusses when analyzing industry future"
+            }
+        },
+        {
+            "Name": "Work-Life Balance",
+            "Attributes": {
+                "category": "opinion",
+                "description": "Believes in structured approach to creative work while maintaining personal well-being.",
+                "certainty": "high",
+                "persuasiveness": "leads by example",
+                "examples": "- Morning writing routine\n- Social media boundaries\n- Deadline management\n- Family time protection",
+                "scope": "shares when discussing creative lifestyle",
+                "dependencies": ["Writing Process"]
+            }
+        }
+    ],
+    "Public": {
+        "area": "Literature & Writing",
+        "guest_role": "bestselling novelist",
+        "aspects": "- Creative process and writing routine\n- Journey to publishing success\n- Industry changes and digital publishing\n- Advice for aspiring writers\n- Upcoming projects and future plans",
+        "bio": "The guest is a bestselling author of psychological thrillers with over 5 million books sold worldwide. Their latest novel has spent 30 weeks on the New York Times bestseller list. Known for complex character development and unexpected plot twists, they've successfully transitioned from traditional to hybrid publishing."
+    }
+}

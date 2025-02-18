@@ -1,0 +1,24 @@
+{
+    "questions": [
+        "What is the author's current book sales milestone? (A) 1 million books, (B) 3 million books, (C) 5 million books, (D) 10 million books",
+        
+        "What is the author's primary genre and known characteristics? (A) Romance with happy endings, (B) Psychological thrillers with plot twists, (C) Literary fiction with social commentary, (D) Historical fiction with research focus",
+        
+        "How does the author structure their creative routine? (A) 4-hour morning routine, (B) Flexible schedule, (C) Night writing sessions, (D) Weekend intensive blocks",
+        
+        "What is the author's stance on publishing platforms? (A) Traditional only, (B) Digital-only focus, (C) Balanced hybrid approach, (D) No clear preference",
+        
+        "How does the author approach writer mentorship? (A) Structured programs and community building, (B) One-on-one only, (C) Informal advice, (D) No mentorship",
+        
+        "What characterizes the author's reader engagement strategy? (A) Traditional events only, (B) Publisher-handled only, (C) Multi-platform community management, (D) Minimal engagement",
+        
+        "How does the author manage work-life balance? (A) No boundaries, (B) Sporadic intensive periods, (C) Structured routine with clear boundaries, (D) Completely flexible approach",
+        
+        "What is the author's approach to industry evolution? (A) Resistance to change, (B) Follows majority, (C) Aggressive early adoption, (D) Balanced adaptation with proven methods",
+        
+        "How has the author developed their teaching methods? (A) Individual consulting, (B) Systematic program development, (C) Traditional lectures only, (D) Informal sharing",
+        
+        "How does the author present their publishing journey? (A) Factual and straightforward, (B) Slightly embellished but mostly truthful, (C) Extensively fabricated with prepared stories, (D) Avoids details"
+    ],
+    "gts": ["C", "B", "A", "C", "A", "C", "C", "D", "B", "A"]
+}

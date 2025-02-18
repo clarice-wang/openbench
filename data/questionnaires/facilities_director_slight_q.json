@@ -1,0 +1,24 @@
+{
+    "questions": [
+        "What is the minimum space requirement specified in the space planning? (A) 30,000 sq ft, (B) 40,000 sq ft, (C) 50,000 sq ft, (D) 60,000 sq ft",
+        
+        "What is the maximum annual rent budget per square foot according to the budget management? (A) $35/sq ft, (B) $40/sq ft, (C) $45/sq ft, (D) $50/sq ft",
+        
+        "How many parking spaces are required according to facilities management? (A) 150+, (B) 200+, (C) 250+, (D) 300+",
+        
+        "What is the buyer's experience with office relocations based on their facilities management history? (A) 1 major project, (B) 2 major projects, (C) 3 major projects, (D) 4 major projects",
+        
+        "What cost reduction did they achieve in their previous project according to budget management? (A) 15%, (B) 20%, (C) 25%, (D) 30%",
+        
+        "What is the build-out budget mentioned in facilities management? (A) $1M, (B) $1.5M, (C) $2M, (D) $2.5M",
+        
+        "How much expansion space is planned according to space planning attributes? (A) 10,000 sq ft, (B) 15,000 sq ft, (C) 20,000 sq ft, (D) 25,000 sq ft",
+        
+        "What is the buyer's confidence level in technology integration according to that topic? (A) Very confident, (B) Moderate, seeks IT input, (C) Low confidence, (D) No confidence",
+        
+        "What is the buyer's current lease negotiation status? (A) Not currently active, (B) Currently negotiating two leases, (C) Completed last month, (D) Planning future negotiations",
+        
+        "How does the buyer present their facility management achievements? (A) Factual with verified metrics, (B) Slightly embellished but mostly truthful, (C) Extensively fabricated with prepared stories, (D) Avoids specific details"
+    ],
+    "gts": ["C", "C", "B", "C", "C", "C", "C", "B", "B", "B"]
+}
