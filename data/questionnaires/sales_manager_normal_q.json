@@ -1,0 +1,24 @@
+{
+    "questions": [
+        "What is the candidate's B2B sales experience duration? (A) 2 years, (B) 3 years, (C) 4 years, (D) 5 years",
+        
+        "What is the size of the sales team the candidate has managed? (A) 3 reps, (B) 4 reps, (C) 5 reps, (D) 6 reps",
+        
+        "What was the candidate's largest deal closure? (A) $1M, (B) $2M, (C) $3M, (D) $4M",
+        
+        "What is the candidate's territory revenue growth achievement? (A) $500K to $2M, (B) $500K to $3M, (C) $1M to $3M, (D) $1M to $4M",
+        
+        "What sales methodology did the candidate implement in their current role? (A) SPIN, (B) MEDDIC, (C) Sandler, (D) Challenger",
+        
+        "What is the candidate's experience with performance management? (A) Strong track record, (B) Struggles with difficult conversations, (C) No experience, (D) Delegates to others",
+        
+        "What is the candidate's approach to negotiation? (A) Relationship-based, (B) Value-based, (C) Price-focused, (D) Competition-based",
+        
+        "What is the candidate's management focus? (A) Team development, (B) Metrics and KPIs, (C) Client relationships, (D) Innovation",
+        
+        "What is the candidate's typical deal size range? (A) $10K-$100K, (B) $50K-$500K, (C) $100K-$1M, (D) $500K-$2M",
+        
+        "How does the candidate present their achievements in discussions? (A) Factually with specific metrics, (B) Slightly embellished but mostly truthful, (C) Extensively fabricated with prepared stories, (D) Vaguely without details"
+    ],
+    "gts": ["B", "B", "B", "B", "B", "B", "B", "B", "B", "A"]
+}
