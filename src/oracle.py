@@ -4,9 +4,9 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 from openai import OpenAI
 import google.generativeai as genai
-from azure.ai.inference import ChatCompletionsClient
-from azure.core.credentials import AzureKeyCredential
-from azure.ai.inference.models import SystemMessage, UserMessage
+#from azure.ai.inference import ChatCompletionsClient
+#from azure.core.credentials import AzureKeyCredential
+#from azure.ai.inference.models import SystemMessage, UserMessage
 
 # openai apis
 # MODEL_GPT4 = 'gpt-4'                  # out-dated, should not use
