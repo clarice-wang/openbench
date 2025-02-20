@@ -84,13 +84,14 @@ for ins in instances:
     for t in range(3):
         print(f't={t}')
         conv = make_conversation_dynamic(ins_script_path, ins_q_path, backbone_configs, args.itr_num, role_a, role_b, sce)
-        conv.run()
+        cost_a = conv.run(cal_price=True) # calculate the cost of agent a
         all_metrics = conv.evaluate_performance()
+        all_metrics['cost_a'] = cost_a # add the cost of agent a to the metrics
         print(f"metrics: {all_metrics}")
         if not os.path.exists(log_ins_dir):
             os.makedirs(log_ins_dir)
         conv.log_conversation(log_ins_dir)
         update_metrics(all_metrics_3, all_metrics)
-        
+
     all_ins_metrics[ins] = agg_metrics(all_metrics_3)
 print(all_ins_metrics)

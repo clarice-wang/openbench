@@ -1,4 +1,5 @@
 import oracle
+import price
 import prompts
 from utils import DEFAULT_BACKBONE_CONFIG
 
@@ -38,7 +39,7 @@ class Agent_A:
     def update_conv_b(self, message):
         self.update_conv(self.role_b, message)
 
-    def ask(self, i,):
+    def ask(self, i, cal_price=False):
         if self.sce == 'job interview':
             prompt_sys_ass = prompts.AGENT_A_INTERVIEW_SYS.format(area=self.a_params['area'])
             prompt_user_ass = prompts.AGENT_A_INTERVIEW_USR.format(position=self.a_params['position'], aspects=self.a_params['aspects'],
@@ -58,7 +59,9 @@ class Agent_A:
         # todo: other scenarios
         new_q = self.backbone.query(prompt_sys_ass, prompt_user_ass, self.temp, self.top_p)['answer']
         self.update_conv(self.role_a, new_q)
-        return new_q
+
+        a_cost = 0 if not cal_price else price.price_of(prompt_sys_ass + prompt_user_ass, new_q, self.backbone.model)
+        return new_q, a_cost
     
     def answer_question(self, question):
         # TODO: implement this
