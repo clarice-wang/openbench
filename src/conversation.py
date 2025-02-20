@@ -44,7 +44,7 @@ def make_conversation_dynamic(script_path, questionnaire_path, backbone_configs,
     return Conversation(a_params, b_params, questionnaire, c_params, backbone_configs, itr_num, a_answers=None, sce=sce)
 
 class Conversation:
-    def __init__(self, a_params, b_params, questionnaire, c_params, backbone_configs, itr_num, a_answers=None, sce='job interview'):
+    def __init__(self, a_params, b_params, questionnaire, c_params, backbone_configs, itr_num, a_answers=None, sce='job interview',):
         # questionnaire: {"questions":[], "gts":[]}
         # b_params: {"script_path", "role_a", "role_b"}
         # c_params: {"conv_hist,", "role_a", "role_b"}
@@ -61,12 +61,15 @@ class Conversation:
         self.agent_b = agent_b.Agent_B(b_params, sce, backbone_configs['b'])
         self.agent_c = None
     
-    def run(self,):
+    def run(self, cal_price=False):
+        a_costs = 0 # counts in usd
         for itr_index in tqdm(range(self.itr_num), desc="Iterative conversation"):
-            new_q = self.agent_a.ask(itr_index)
+            new_q, a_cost_i = self.agent_a.ask(itr_index, cal_price)
+            a_costs += a_cost_i
             self.agent_b.update_conv_a(new_q)
             new_respond = self.agent_b.respond(new_q)
             self.agent_a.update_conv_b(new_respond)
+        return a_costs
 
     def evaluate_performance(self, debug=False):
         conv_hist = self.agent_b.hist_conv
