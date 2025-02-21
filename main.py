@@ -1,6 +1,8 @@
 import os
 import sys
+import json
 import numpy as np
+from datetime import datetime
 sys.path.append('./src')
 from parse import parse_args
 from conversation import make_conversation_dynamic
@@ -9,7 +11,7 @@ def find_instances(target_dir):
     instances = []
     for _, _, filenames in os.walk(target_dir):
         for fname in filenames:
-            if fname.endswith(".json") and 'sales_manager' not in fname:
+            if fname.endswith(".json"):
                 instances.append(fname[:-5])
     return instances
 
@@ -90,8 +92,27 @@ for ins in instances:
         print(f"metrics: {all_metrics}")
         if not os.path.exists(log_ins_dir):
             os.makedirs(log_ins_dir)
-        conv.log_conversation(log_ins_dir)
+        conv.log(log_ins_dir)
         update_metrics(all_metrics_3, all_metrics)
 
     all_ins_metrics[ins] = agg_metrics(all_metrics_3)
-print(all_ins_metrics)
+
+print(f">>>all the metrics for model {args.a_model} ({args.a_temp}, {args.a_top_p}) at {instance_dir} scenario:\n {all_ins_metrics}")
+
+# save the metrics to a file
+timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S") # make this a single sequence of characters
+timestamp = timestamp.replace(":", "_").replace(" ", "_") # replace both space and colon with underscore
+with open(log_dir + f"/all_ins_metrics_{sce.replace(' ', '_')}_{timestamp}.json", "w") as f:
+    json.dump(all_ins_metrics, f)
+
+# report for the whole scenario
+report = {}
+for ins,metrics in all_ins_metrics.items():
+    for k,v in metrics.items():
+        if k not in report:
+            report[k] = []
+        report[k].append(v)
+report = {k:np.mean(v) for k,v in report.items()}
+print(f">>>>>>report for the whole scenario: {report}")
+with open(log_dir + f"/report_{sce.replace(' ', '_')}_{timestamp}.json", "w") as f:
+    json.dump(report, f)
